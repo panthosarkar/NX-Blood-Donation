@@ -1,0 +1,30 @@
+.modal_box_backdrop {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: #ebebeb;
+}
+
+.modal_box_content {
+  align-content: normal;
+  align-items: normal;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  left: 50%;
+  max-height: calc(100% - 20px);
+  max-width: calc(100% - 50px);
+  min-height: 185px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 490px;
+  overflow: auto;
+}

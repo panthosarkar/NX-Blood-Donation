@@ -1,42 +1,71 @@
-import type { Metadata } from "next";
-import "./../src/styles/style-main.css";
+import { ReactNode } from "react";
 import localFont from "next/font/local";
-import ComposeProviders from "@/src/lib/ComposeProviders";
-import TemplateProvider from "@/src/contexts/template/TemplateProvider";
-// import { InitProvider } from "@/src/contexts/InitProvider";
-// import { AuthProvider } from "@/src/contexts/AuthProvider";
-import LayoutProvider from "@/src/contexts/LayoutProvider";
-import { MainNavbar } from "@/src/shared/navbar/MainNavbar";
-import Footer from "@/src/shared/footer/Footer";
+// import InitProvider from "@/bik-lib/context/InitProvider";
+import Com2Provider from "@/bik-lib/context/auth/Com2Provider";
+// import Auth2Provider from "@/bik-lib/context/auth/Auth2Provider";
+import ComposeProviders from "@/bik-lib/lib/ComposeProviders";
+import "@/bikiran/styles/styles.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { getMode } from "@/bik-lib/utils/Env";
+import dynamic from "next/dynamic";
+import { Metadata, Viewport } from "next";
+const CrispWithNoSSR = dynamic(() => import("@/bik-lib/utils/crisp"));
 
-const dmSans = localFont({
-  display: "swap",
-  src: "./../public/assets/fonts/DMSans-VariableFont_opsz,wght.ttf",
-  variable: "--font-dm-sans",
+export const poppins = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/Poppins-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "../public/assets/fonts/Poppins-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../public/assets/fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+    },
+    {
+      path: "../public/assets/fonts/Poppins-Bold.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-poppins",
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Deshi Alumni",
-    default: "Deshi Alumni - Your destination for alumni connections",
-  },
-  description:
-    "Discover the vast opportunities for alumni connections at Deshi Alumni. Reconnect with old friends, build networks, and stay connected with your alumni community.",
+// Viewport configuration for zoom prevention
+// This will generate the <meta name="viewport" ...> tag
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false, // This is the key property to prevent user scaling (zoom)
+  // or you can use userScalable: 'no'
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const metadata: Metadata = {
+  title: "Bikiran Admin",
+  description: "Bikiran Admin Panel",
+};
+
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} !mr-0 !w-full !overflow-y-auto`}>
-        <ComposeProviders components={[TemplateProvider, LayoutProvider]}>
-          <MainNavbar />
-          <main>{children}</main>
-          <Footer />
+      <body className={`${poppins.variable} `}>
+        <ComposeProviders components={[Com2Provider]}>
+          {children}
         </ComposeProviders>
+
+        {getMode() === "com" ? (
+          <>
+            <GoogleAnalytics gaId="G-HC30L40DJS" />
+            <CrispWithNoSSR />
+          </>
+        ) : null}
       </body>
     </html>
   );

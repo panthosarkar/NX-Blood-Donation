@@ -1,0 +1,7 @@
+.search_container {
+  @apply w-full h-full flex items-center rounded-10 bg-primary-50;
+}
+
+.search_container > input {
+  @apply w-full h-full bg-transparent focus:outline-none text-base font-normal;
+}

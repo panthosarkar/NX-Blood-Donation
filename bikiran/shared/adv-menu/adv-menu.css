@@ -1,0 +1,197 @@
+.adv-menu {
+  @apply bg-white w-[66px] h-full fixed top-0 left-0 z-[2] border-r-[1px] border-[#e8e7ec] transition-all ease-in-out;
+}
+.adv-menu .layer-1 {
+  @apply bg-[#f3f3f5] w-[66px] h-full border-r;
+}
+.adv-menu .layer-1 .btn-menu {
+  @apply h-[50px];
+}
+.adv-menu .adv-list-1 {
+  @apply p-0 m-0 w-full 2xl:mt-0 mt-3 overflow-y-auto overflow-x-hidden h-[calc(100%_-_50px)];
+}
+.adv-menu .adv-list-1 > li {
+  @apply relative p-0 2xl:mt-4 list-none;
+}
+.adv-menu .adv-list-1 > li > .menu {
+  @apply text-center w-[56px] 2xl:h-[70px] h-[65px] flex flex-col flex-nowrap justify-center content-stretch items-center mx-[5px];
+}
+.adv-menu .adv-list-1 > li > .menu > span {
+  @apply text-[#5a577a] text-xs font-medium;
+}
+.adv-menu .adv-list-1 > li > .menu > div {
+  @apply block mx-auto w-full 2xl:h-10 h-9 mb-[5px] relative rounded-[15%] transition-all ease-in-out;
+}
+.adv-menu .adv-list-1 > li > .menu > div > img {
+  @apply size-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ease-in-out;
+}
+.adv-menu .adv-list-1 > li > .menu > div > img:nth-child(1) {
+  @apply opacity-0;
+}
+.adv-menu .adv-list-1 > li > .menu > div > img:nth-child(2) {
+  @apply opacity-100;
+}
+
+.adv-menu .adv-list-1 > li.active > .menu > div,
+.adv-menu .adv-list-1 > li:hover > .menu > div {
+  @apply bg-[#f7e6f8] font-bold !text-red-600;
+}
+.adv-menu .adv-list-1 > li.active > .menu > span,
+.adv-menu .adv-list-1 > li:hover > .menu > span {
+  @apply text-primary;
+}
+.adv-menu .adv-list-1 > li.active > .menu > div > img:nth-child(1),
+.adv-menu .adv-list-1 > li:hover > .menu > div > img:nth-child(1) {
+  @apply opacity-100;
+}
+.adv-menu .adv-list-1 > li.active > .menu > div > img:nth-child(2),
+.adv-menu .adv-list-1 > li:hover > .menu > div > img:nth-child(2) {
+  @apply opacity-0;
+}
+
+/* Layer 2 */
+.adv-menu .layer-2 {
+  @apply relative bg-white;
+}
+.adv-menu .adv-l2-cont {
+  @apply w-[234px] h-full fixed top-16 left-[66px] z-[100] rounded-15 hidden;
+}
+.adv-menu .adv-list-2 {
+  @apply m-0 p-0 list-none;
+}
+.adv-menu .adv-list-2 > li > .menu {
+  @apply flex justify-start content-stretch items-center text-primary my-1 mx-[15px] rounded-8 relative;
+}
+
+.adv-menu .adv-list-2 > li > .menu > img {
+  /* transition: all 0.25s ease-in-out; */
+  @apply size-5 m-[7px] absolute transition-all;
+}
+.adv-menu .adv-list-2 > li > .menu > img:first-of-type {
+  @apply opacity-100;
+}
+.adv-menu .adv-list-2 > li.active > .menu > img:first-of-type,
+.adv-menu .adv-list-2 > li:hover > .menu > img:first-of-type {
+  @apply opacity-0;
+}
+.adv-menu .adv-list-2 > li.active > .menu > img:last-of-type,
+.adv-menu .adv-list-2 > li > .menu > img:last-of-type {
+  @apply opacity-0;
+}
+.adv-menu .adv-list-2 > li.active > .menu > img:last-of-type,
+.adv-menu .adv-list-2 > li:hover > .menu > img:last-of-type {
+  @apply opacity-100;
+}
+
+.adv-menu .adv-list-2 > li > .menu > span {
+  @apply text-[#5a577a] text-ellipsis whitespace-nowrap  leading-[38px] ml-[42px] overflow-hidden;
+}
+
+.adv-menu .adv-list-2 > li.active > .menu,
+.adv-list-2 > li:hover > .menu {
+  @apply bg-[#fbf2fb];
+}
+
+.adv-menu .adv-list-2 > li.active > .menu > span,
+.adv-menu .adv-list-2 > li:hover > .menu > span {
+  @apply text-primary;
+}
+
+/* L2 Head */
+.adv-menu .adv-l2-head {
+  @apply m-[5px] mb-2.5 bg-[#fbf2fb] py-[5px] px-[15px] rounded-[12px];
+}
+.adv-menu .adv-l2-head > img {
+  @apply size-8 mr-3.5;
+}
+.adv-menu .adv-l2-head > span {
+  @apply text-primary text-xl font-medium;
+}
+
+/* Show L2 */
+.adv-menu.drawer-opened .adv-list-1 > li.active .adv-l2-cont {
+  @apply hidden;
+}
+.adv-menu .adv-list-1 > li.has-submenu:hover .adv-l2-cont {
+  @apply block bg-white shadow-[0px_0px_10px_0px_#9999999c];
+}
+
+.adv-menu .adv-list-1 > li.has-submenu:hover::before {
+  content: "";
+  @apply block absolute left-[53px] top-[13px] bg-transparent w-0 h-0 border border-t-[10px] border-r-[15px] border-b-[10px] border-l-0 border-[transparent_#ffffff_transparent_transparent] z-[101];
+}
+.adv-menu.drawer-opened .adv-list-1 > li.active::before,
+.adv-menu.drawer-opened .adv-list-1 > li.active .adv-l2-cont {
+  @apply hidden;
+}
+
+/* Drawer Open/Close */
+.adv-menu.drawer-opened {
+  @apply w-[301px];
+}
+.adv-menu.drawer-closed {
+  @apply w-[0px];
+}
+.adv-menu .active .adv-l2-cont {
+  /* transition: all 0.2s ease-in-out; */
+  @apply w-0 overflow-hidden transition-all ease-in-out;
+}
+.adv-menu.drawer-opened .active .adv-l2-cont {
+  @apply w-[234px];
+}
+
+.adv-menu.drawer-closed .adv-list-1 > li.active .adv-l2-cont,
+.adv-menu.drawer-closed .adv-list-1 > li.active:hover .adv-l2-cont {
+  @apply w-[234px];
+}
+
+/* Layer 2 */
+.adv-menu .layer-2 .adv-l2-cont {
+  @apply block w-[234px] overflow-hidden transition-all ease-in-out z-[1] bg-white;
+}
+.adv-menu.drawer-closed .layer-2 .adv-l2-cont {
+  @apply w-0;
+}
+
+/* Cont Size */
+.menu-cont {
+  /* transition: all 0.25s ease-in-out; */
+  @apply h-full pt-12 box-border bg-[#fafbfb] transition-all ease-in-out;
+}
+.menu-cont.d-opened {
+  @apply ml-[300px];
+}
+.menu-cont.d-closed {
+  @apply ml-[66px];
+}
+/* Page Content */
+/* .page-content-container {
+  @apply w-[calc(100%_-_66px)] ml-[66px] h-screen pt-10 pb-20 mt-[50px] bg-[#fafbfb] overflow-auto transition-all;
+} */
+
+.page-content-container {
+  @apply w-full mx-auto h-[calc(100vh_-_50px)] pt-6 2xl:pt-10 pb-20 bg-[#fafbfb] overflow-auto transition-all ease-in-out 2xl:pl-[66px] print:!pl-0 print:!pt-0 print:!mx-0 print:h-[1100px] print:overflow-hidden;
+}
+.page-content-container > div {
+  @apply 2xl:max-w-[1170px] w-10/12 pl-[66px] 2xl:pl-0 2xl:w-full mx-auto print:!w-full print:!pl-0;
+}
+
+/* .page.active .page-content-container {
+  @apply w-[calc(100%_-_300px)] ml-[300px] h-[calc(100vh_-_80px)];
+} */
+
+.page.active .page-content-container {
+  @apply 2xl:pl-[301px] print:pl-0;
+}
+
+.page-content-container::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+.page-content-container::-webkit-scrollbar-track {
+  @apply bg-primary-50;
+}
+
+.page-content-container::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-5;
+}

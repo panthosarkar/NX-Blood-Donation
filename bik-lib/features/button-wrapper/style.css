@@ -1,0 +1,25 @@
+/* icon hover effect */
+.hover_icon {
+  @apply relative;
+}
+.hover_icon img {
+  position: absolute;
+  top: 0;
+}
+
+.hover_icon img:nth-child(2) {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.hover_icon:hover img:nth-child(2) {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.hover_icon.active img:nth-child(1) {
+  opacity: 1;
+  background-color: #fff;
+}

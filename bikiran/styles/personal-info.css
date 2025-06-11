@@ -1,0 +1,87 @@
+.user_name {
+  @apply text-xl sm:text-[25px] font-normal text-primary-900 mb-1;
+}
+.info_intro {
+  @apply text-sm sm:text-base font-normal text-primary-700;
+}
+
+.info_row {
+  @apply flex flex-col sm:flex-row items-center justify-center sm:justify-between border-b last:border-0 h-21 max-h-50 sm:h-16 transition-all duration-300;
+}
+.info_row > div:nth-child(1) {
+  @apply w-full sm:w-48 mb-1 sm:mb-0;
+}
+.info_row > div:nth-child(2) {
+  @apply w-full max-w-full sm:max-w-[calc(100%_-_192px_-_30px)] sm:pr-4;
+}
+
+.info_row .title {
+  @apply text-base text-primary-500 font-medium;
+}
+
+.info_row .value {
+  @apply text-base text-left text-primary font-normal whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.info_row .btn-edit {
+  @apply size-6 sm:size-7.5 flex items-center justify-center bg-primary-100  text-primary-500  rounded-full transition-all;
+}
+
+.info_row .btn-edit:hover,
+.info_row .btn-edit.active {
+  @apply bg-success text-white;
+}
+
+.expanded_info_row {
+  @apply max-h-0 w-full rounded-10 bg-primary-50 overflow-hidden transition-all duration-500;
+}
+
+.expanded_info_row > div {
+  @apply w-full h-auto px-3.5 pt-4.5 pb-6;
+}
+
+.expanded_info_row label {
+  @apply text-primary-700 text-base font-medium ml-1;
+}
+
+.expanded_info_row input {
+  @apply w-full h-12.5;
+}
+
+.info_row_container.active .expanded_info_row {
+  @apply max-h-100;
+}
+
+.info_row_container:last-child .info_row {
+  @apply border-0;
+}
+
+.info_row_container.active .info_row {
+  @apply border-transparent;
+}
+
+/* update address */
+.address_form_container {
+  @apply grid gap-5;
+}
+
+.address_form_container input {
+  @apply w-full;
+}
+
+.address_collapsed_fields {
+  @apply flex justify-end items-center gap-2 flex-nowrap !text-xs;
+}
+
+.address_collapsed_fields button {
+  @apply flex items-center justify-between gap-1 rounded-5 bg-primary-100 py-[1px] px-2 text-primary transition-colors;
+}
+
+.address_collapsed_fields button:hover,
+.address_collapsed_fields button.active {
+  @apply text-white bg-secondary;
+}
+
+button.address_collapsed_button {
+  @apply size-4 border border-transparent rounded-full p-1 flex justify-center items-center bg-[#fae7e8] hover:bg-error text-error hover:text-white transition-colors;
+}

@@ -1,0 +1,109 @@
+.contact_info_row_container {
+  @apply flex items-center justify-between  h-full max-h-[62px] min-h-[62px] border-b;
+}
+
+.contact_email_logo {
+  @apply size-6 sm:size-7.5;
+}
+
+.contact_phone_logo {
+  @apply size-6 sm:size-7.5 p-2 bg-[linear-gradient(180deg,_rgba(19,15,64,0.08)_0%,_rgba(19,15,64,0.00)_100%)] rounded-full;
+}
+.contact_title {
+  @apply text-primary text-sm sm:text-base font-normal leading-normal;
+}
+.contact_type_text {
+  @apply text-error text-xs font-normal leading-normal;
+}
+
+.contact_info_tag {
+  @apply py-1 px-2 sm:px-2.5 text-xs sm:text-sm font-normal leading-normal rounded-[6px];
+}
+.contact_info_tag.primary {
+  @apply bg-primary-100 text-primary;
+}
+.contact_info_tag.pending {
+  @apply bg-[rgba(246,146,32,0.10)] text-[#F69220];
+}
+.contact-info-tag-sm {
+  @apply bg-primary-100 text-primary rounded-5 px-1 text-xs mt-1 mr-1;
+}
+.contact_verify_btn {
+  @apply bg-[#F69220] px-2.5 py-1 rounded-[6px] text-white text-sm font-normal;
+}
+
+.contact_delete_btn {
+  @apply size-7.5 p-2 bg-primary-50 rounded-full;
+}
+
+/* button */
+.contact-add-btn {
+  @apply relative flex items-center justify-center sm:justify-normal gap-2 bg-secondary-100 border border-primary-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-10 text-primary text-sm sm:text-base font-medium transition-colors;
+}
+
+.contact-add-btn {
+  @apply border-transparent text-primary;
+}
+
+.contact-add-btn:hover {
+  @apply text-white;
+}
+
+.contact-add-btn.google {
+  @apply border-[rgba(251,188,5,0.10)] bg-[rgba(251,188,5,0.05)];
+}
+
+.contact-add-btn.facebook {
+  @apply border-[rgba(30,152,236,0.10)] bg-[rgba(30,152,236,0.05)];
+}
+
+.contact-add-btn.github {
+  @apply border-[rgba(19,15,64,0.10)] bg-[rgba(19,15,64,0.05)];
+}
+
+.contact-add-btn.mail {
+  @apply border-[rgba(174,0,185,0.10)] bg-secondary-100;
+}
+
+.contact-add-btn:hover {
+  @apply border-transparent text-white;
+}
+
+.contact-add-btn.google:hover {
+  @apply border-transparent bg-[#FBBC05];
+}
+
+.contact-add-btn.facebook:hover {
+  @apply border-transparent bg-[#1E98EC];
+}
+
+.contact-add-btn.github:hover {
+  @apply border-transparent bg-[#040D21];
+}
+
+.contact-add-btn.mail:hover {
+  @apply border-transparent bg-secondary;
+}
+
+.contact-add-btn .img-cont {
+  @apply relative size-4 sm:size-5;
+}
+
+.contact-add-btn img {
+  @apply absolute top-0 size-4 sm:size-5;
+}
+
+.contact-add-btn img:nth-child(2) {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.contact-add-btn:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.contact-add-btn.active img:nth-child(2) {
+  opacity: 1;
+}

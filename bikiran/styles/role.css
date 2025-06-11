@@ -1,0 +1,16 @@
+.invitation-card {
+  @apply bg-white sm:shadow-[0px_4px_70px_0px_rgba(19,15,64,0.10)] sm:rounded-[25px] px-3 sm:p-5 w-full max-w-[400px] relative;
+}
+.invitation-card .user-avatar {
+  @apply size-[80px] sm:size-[100px] absolute -top-16 sm:-top-12 left-1/2 transform -translate-x-1/2;
+}
+.invitation-card .card-header {
+  @apply h-[80px] sm:h-[105px] border-b pb-3 flex justify-center items-end;
+}
+.invitation-card .card-header .user-name {
+  @apply text-primary text-lg sm:text-xl font-medium;
+}
+
+.invitation-card .list-container {
+  @apply py-2.5 space-y-[6px] list-disc pl-5 pr-2 mb-1;
+}

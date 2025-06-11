@@ -1,0 +1,89 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { isDev } from "@/bik-lib/utils/Env";
+import { useAuth } from "@/bikiran/context/AuthProvider";
+import { useCom } from "@/bikiran/context/ComProvider";
+
+const CrossPage = () => {
+  const com = useCom();
+  const { authInfo, signOut } = useAuth();
+  const [receivedData, setReceivedData] = useState({ data: null, origin: "" });
+
+  // Send Ready Message
+  useEffect(() => {
+    com
+      .requestMessage({ action: "ready" })
+      .then((data) => {
+
+      })
+      .catch((err: Error) => {
+
+      });
+  }, [com]);
+
+  // useEffect(() => {
+  //   // Send Login Info
+  //   if (
+  //     typeof window !== "undefined" &&
+  //     authInfo.loading === false &&
+  //     receivedData.action === "login-required" &&
+  //     allowedOrigin.find((item) => item === receivedData.origin)
+  //   ) {
+  //     com.setMessage({ action: "login-sent" }, receivedData.origin);
+  //   }
+  // }, [authInfo, receivedData, com]);
+
+  // useEffect(() => {
+  //   // Send Logout Info
+  //   if (
+  //     typeof window !== "undefined" &&
+  //     authInfo.loading === false &&
+  //     receivedData.action === "logout-required" &&
+  //     allowedOrigin.find((item) => item === receivedData.origin)
+  //   ) {
+  //     signOut()
+  //       .then((data) => {
+  //         window.parent?.postMessage(
+  //           { ...data, action: "logout" },
+  //           receivedData.origin
+  //         );
+
+  //         com.requestMessage({ action: "logout" }, receivedData.origin);
+  //       })
+  //       .catch((err: Error) => {
+  //         console.log(err);
+  //       });
+  //   }
+  // }, [authInfo, com, receivedData, signOut]);
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     const handelMessageListener = ({ data, origin }) => {
+
+  //       setReceivedData({ ...data, origin });
+  //     };
+
+  //     window.addEventListener("message", handelMessageListener);
+
+  //     return () => {
+  //       window.removeEventListener("message", handelMessageListener);
+  //     };
+  //   }
+  // }, []);
+
+  return <div>CrossPage</div>;
+};
+
+const allowedOrigin =
+  typeof window !== "undefined" &&
+  (isDev || window.location.host === "accounts-d.bikiran.com")
+    ? ["http://localhost:5000"]
+    : [
+        "https://www.bikiran.com",
+        "https://admins.bikiran.com",
+        "https://push.bikiran.com",
+        "https://console.bikiran.com",
+      ];
+
+export default CrossPage;

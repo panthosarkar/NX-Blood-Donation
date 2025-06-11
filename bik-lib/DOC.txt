@@ -1,0 +1,60 @@
+# For AxiosAPI.ts
+yarn add axios url-parse
+yarn add @types/url-parse -D
+
+# For cn.ts
+yarn add clsx tailwind-merge
+
+# For crisp.ts
+yarn add crisp-sdk-web
+
+# For date.ts (used in utils and input fields) 
+yarn add dayjs
+yarn add react-flatpickr
+yarn add @type/react-flatpickr -D
+
+# For InputFields.tsx (lib folder)
+yarn add dayjs
+yarn add @types/dayjs -D
+
+# For InitProvider.tsx (lib folder)
+yarn add crypto-js
+yarn add @types/crypto-js -D
+
+
+{
+  "scripts": {
+    "lib-pkg": "yarn add axios url-parse crisp-sdk-web dayjs crypto-js react-flatpickr && yarn add @types/url-parse @types/dayjs @types/crypto-js @type/react-flatpickr -D"
+  }
+}
+
+# Firabase
+
+yarn add @firebase/app-types @firebase/util
+
+
+// shad Cn components
+
+npx shadcn@latest add accordion
+npx shadcn@latest add alert-dialog
+npx shadcn@latest add avatar
+npx shadcn@latest add button
+npx shadcn@latest add calendar
+npx shadcn@latest add checkbox
+npx shadcn@latest add dialog
+npx shadcn@latest add drawer
+npx shadcn@latest add dropdown-menu
+npx shadcn@latest add input-otp
+npx shadcn@latest add input
+npx shadcn@latest add label
+npx shadcn@latest add popover
+npx shadcn@latest add radio-group
+npx shadcn@latest add select
+npx shadcn@latest add sheet
+npx shadcn@latest add skeleton
+npx shadcn@latest add slider
+npx shadcn@latest add switch
+npx shadcn@latest add table
+npx shadcn@latest add textarea
+npx shadcn@latest add warning-dialog
+npx shadcn@latest add tooltip

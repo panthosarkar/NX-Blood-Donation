@@ -1,0 +1,40 @@
+/* Template */
+
+.floating-message {
+  position: fixed;
+  background: #000;
+  left: 10px;
+  bottom: 12px;
+  width: 300px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0 10px;
+  box-sizing: border-box;
+  min-height: 50px;
+  z-index: 2001;
+  pointer-events: all;
+}
+
+.floating-message > span {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.floating-message > button {
+  background: #000;
+  border: 0px solid;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.floating-message > button:hover {
+  opacity: 1;
+}
+
+.floating-message > button > svg {
+  color: rgba(255, 255, 255);
+  width: 25px;
+  height: 25px;
+  display: block;
+}

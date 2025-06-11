@@ -1,0 +1,5 @@
+{
+  "files": [],
+  "dirs": ["bikiran/utils"],
+  "ignoreFiles": ["_bikiran/utils/AxiosAPI.js"]
+}

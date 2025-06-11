@@ -1,0 +1,6 @@
+.invoice-action-cont {
+  @apply w-full h-auto p-5 pt-3 rounded-20 shadow-[0_0_50px_rgba(19,15,64,.08)];
+}
+.invoice-edit-btn {
+  @apply rounded-10 text-primary font-medium transition-colors z-10;
+}

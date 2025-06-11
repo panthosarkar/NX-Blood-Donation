@@ -1,0 +1,15 @@
+/* information */
+.info_wrapper {
+  @apply border-y sm:border sm:rounded-20 py-4 sm:py-6 -mx-5 sm:mx-0 px-5 sm:px-7.5;
+}
+
+.info_divider {
+  @apply flex items-end gap-3;
+}
+
+.info_divider > h2 {
+  @apply whitespace-nowrap text-primary-500 text-sm sm:text-base font-normal;
+}
+.info_divider hr {
+  @apply w-full mb-2;
+}

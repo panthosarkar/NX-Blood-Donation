@@ -1,0 +1,25 @@
+.footer-section-container.light .text-p {
+  @apply text-primary;
+}
+.footer-section-container.light .text-p-700 {
+  @apply text-primary-700;
+}
+.footer-section-container.light .text-p-light {
+  @apply text-[#130f40b3];
+}
+
+.footer-section-container.dark .text-p,
+.footer-section-container.dark .text-p-700,
+.footer-section-container.dark .text-p-light,
+.footer-section-container.dark .text-sm,
+.footer-section-container.dark .arrow {
+  @apply text-[#D3DFFF];
+}
+
+/* Currency Selector */
+.footer-section-container.dark .dropdown-option {
+  @apply text-primary;
+}
+.footer-section-container.dark .dropdown-option:hover {
+  @apply text-secondary;
+}

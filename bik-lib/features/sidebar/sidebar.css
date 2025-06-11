@@ -1,0 +1,21 @@
+/* Page Content */
+/* .page-content-container {
+  @apply w-[calc(100%_-_66px)] ml-[66px] h-screen pt-10 px-40 mt-20 bg-white overflow-auto transition-all;
+}
+
+.page.active .page-content-container {
+  @apply w-[calc(100%_-_300px)] ml-[300px];
+}
+
+.page-content-container::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+.page-content-container::-webkit-scrollbar-track {
+  @apply bg-primary-50;
+}
+
+.page-content-container::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-5;
+}
+ */

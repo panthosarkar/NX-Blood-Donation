@@ -1,0 +1,16 @@
+export const INVOICE_SCOPES = {
+  PRODUCT_OPERATIONS: "ProductOperations",
+  PAYMENTS: "Payments",
+  VAT_PAYMENT: "VatPayment",
+  REFUND: "Refund",
+  SET_AS_ACTIVE: "SetAsActive",
+  SET_AS_OPEN: "SetAsOpen",
+  UPDATE_DATES: "UpdateDates",
+  UPDATE_ADDRESS: "UpdateAddress",
+  UPDATE_OWNERSHIP: "UpdateOwnership",
+  UPDATE_CURRENCY: "UpdateCurrency",
+  INVOICE_DELETE: "InvoiceDelete",
+  SEND_PUSH_NOTIFICATION: "SendPushNotification",
+  SEND_EMAIL: "SendEmail",
+  SEND_SMS: "SendSMS",
+} as const;

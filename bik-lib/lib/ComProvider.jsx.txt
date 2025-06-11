@@ -1,0 +1,103 @@
+"use client";
+
+import React, { createContext, useContext, useMemo, useState } from "react";
+
+const ComContext = createContext();
+
+export function useCom() {
+  return useContext(ComContext);
+}
+
+function ComProvider({ children }) {
+  const value = useMemo(() => {
+    // const setMessage = (data, origin = "*") => {
+    //   window?.parent?.postMessage(data, origin);
+    // };
+
+    // const getMessage = () => {
+    //   return "Hello World";
+    // };
+
+    const requestMessage = (body, origin = "*") => {
+      return new Promise((resolve, reject) => {
+        if (!window) {
+          reject("Window not found");
+        }
+
+        if (!window.parent) {
+          reject("Parent window not found");
+        }
+
+        // Generate a Random ID
+        const id = Math.random().toString(36).substring(7);
+        const head = {
+          appId: "bikiran",
+          requestId: id,
+          dateTime: new Date().toISOString(),
+          host: window.location.host,
+        };
+
+        // Send message to parent
+        window.parent.postMessage({ head, body }, origin);
+
+        // Listen for response
+        const listener = (event) => {
+          // if (event.origin !== origin) {
+          //   return;
+          // }
+
+          if (!event.data.head || !event.data.head.requestId) {
+            return;
+          }
+
+          if (event.data.head.requestId === id) {
+            // Remove event listener
+            window.removeEventListener("message", listener);
+            resolve(event.data.body);
+          }
+        };
+
+        // Listen for response
+        window.addEventListener("message", listener);
+
+        //   // Reject if no response after 10 seconds
+        //   setTimeout(() => {
+        //     reject("Request timed out");
+
+        //     // Remove event listener
+        //     window.removeEventListener("message", listener);
+        //   }, 10000);
+
+        //   // Reject if window is closed
+        //   window.addEventListener("beforeunload", () => {
+        //     reject("Window closed");
+
+        //     // Remove event listener
+        //     window.removeEventListener("message", listener);
+        //   });
+
+        //   // Reject if parent is closed
+        //   window.parent.addEventListener("beforeunload", () => {
+        //     reject("Parent closed");
+
+        //     // Remove event listener
+        //     window.removeEventListener("message", listener);
+        //   });
+      });
+    };
+
+    return {
+      requestMessage,
+    };
+  }, []);
+
+  return <ComContext.Provider value={value}>{children}</ComContext.Provider>;
+}
+
+// Workflow
+// 1. Accounts to Parent => Ready
+// 2. Parent to Accounts => Login Required
+// 3. Accounts to Parent => Login Credentials Sent
+// 4. Parent to Accounts => Logout Required
+
+export default ComProvider;

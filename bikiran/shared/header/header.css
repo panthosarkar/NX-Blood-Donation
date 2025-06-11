@@ -1,0 +1,81 @@
+.header_container {
+  @apply w-full h-[50px] bg-white px-5 border-b border-[#e8e7ec] print:hidden;
+}
+
+.web-header {
+  @apply fixed h-[50px] top-0 left-[66px] w-[calc(100%_-_66px)] z-20 border-b print:h-0;
+}
+
+.web-header-gap {
+  @apply h-[50px] print:h-0;
+}
+
+.web-header.position-high .header_container {
+  @apply shadow-[8px_10px_80px_rgb(0_15_55_/_10%)];
+}
+.header_menu_item {
+  @apply rounded-10 transition-colors text-sm xl:text-base font-normal;
+}
+
+.header_search_button,
+.header_notification_button,
+.header_cart_button {
+  @apply sm:w-auto h-5 flex items-center print:hidden;
+}
+
+.header_cart_button .cart_counter {
+  @apply absolute -top-2.5 sm:-top-[9px] -right-2.5 sm:-right-[9px] size-[18px] sm:size-5 flex justify-center items-center border-[3px] border-[#fdfdfd] bg-secondary text-white text-[9px] rounded-full;
+}
+
+.header_searchbar_cont {
+  @apply w-[calc(100%_-_40px)] sm:w-[calc(100%_-_100px)] md:w-[450px] lg:w-[630px] h-[50px] absolute top-1/2 transform -translate-y-1/2 left-0 sm:left-10 md:left-9 transition-all;
+}
+
+/* navbar service menu */
+.service_menu_wrapper {
+  @apply relative;
+}
+
+.service_menu_wrapper .popover_container {
+  @apply !p-3.5 !gap-0 !top-[60px] !right-0;
+}
+.service_menu_wrapper .popover_container::before {
+  @apply left-[30px] right-auto;
+}
+
+.service_menu {
+  @apply flex items-center gap-2.5 w-full p-2.5 hover:bg-secondary-100 rounded-10 cursor-default;
+}
+.service_menu_title {
+  @apply text-primary leading-6 text-lg font-medium whitespace-nowrap;
+}
+.service_menu_submenu {
+  @apply text-primary-500 hover:text-secondary text-sm font-normal;
+}
+
+.service-popover {
+  @apply max-h-[520px] overflow-auto;
+}
+.sub_menu_container {
+  @apply w-full max-w-[838px] bg-white shadow-xl absolute top-[82px] left-1/2 -translate-x-1/2 rounded-bl-20 rounded-br-20 rounded-t-none max-h-0 transition-all overflow-hidden;
+}
+
+.header-mobile-menu > ul {
+  @apply flex items-center gap-16 border-b pb-2 px-5 overflow-x-scroll bg-white;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.header-mobile-menu > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.header-mobile-menu a {
+  @apply relative text-primary whitespace-nowrap transition-all;
+}
+
+.header-mobile-menu a:hover::after,
+.header-mobile-menu a.active::after {
+  content: "";
+  @apply absolute -bottom-2.5 left-0 w-full min-w-6 h-1 bg-secondary rounded-10 transition-all;
+}

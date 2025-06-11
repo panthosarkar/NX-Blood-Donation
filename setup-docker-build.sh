@@ -4,8 +4,8 @@
 git pull
 
 # Build the image force
-docker build -t src . #--no-cache
+docker build -t bikiran-admin . #--no-cache
 
 # Run the docker
-docker rm -f src
-docker run -d --name src -p 5002:5002 src
+docker rm -f admin
+docker run -d --name admin -p 7215:7215 bikiran-admin

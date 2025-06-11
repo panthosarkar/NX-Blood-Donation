@@ -1,0 +1,2 @@
+* Need to install this package
+  - npx shadcn@latest add drawer

@@ -28,11 +28,11 @@ WORKDIR /app
 COPY --from=build /app/package.json /app/yarn.lock ./
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
-COPY --from=build /app/next.config.ts ./next.config.ts
+COPY --from=build /app/next.config.mjs ./next.config.mjs
 COPY --from=build /app/node_modules ./node_modules
 
 # Expose the port the app runs on
-EXPOSE 7401
+EXPOSE 7215
 
 # Start the Next.js application
 CMD ["yarn", "start"]

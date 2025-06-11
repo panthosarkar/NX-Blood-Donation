@@ -1,0 +1,59 @@
+1. Create a XML sitemap file
+2. Validate SEO compatibility
+3. Crisp Chat Box Setup
+4. Analytics & Webmaster Setup
+5. Facebook share OG Setup
+6. Facebook Pixel Setup
+7. Meta tag & description Setup
+8. Old URL redirect fixing
+9. Performance Optimize 
+10. Fix and optimize i-page issues.
+11. Remove the test page
+12. Test all functionality
+13. Create a test database and configure it.
+
+
+Pending Tasks:
+--------------
+- New google account login issue.
+- Personal information - date of birth field issue on mobile device.
+- Template message close issue while drawer open.
+
+
+
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    165 B          87.3 kB
+├ ○ /_not-found                          871 B            88 kB
+├ ○ /activities                          7.58 kB         193 kB
+├ ○ /address                             15.6 kB         218 kB
+├ ƒ /api/activity                        0 B                0 B
+├ ƒ /api/data                            0 B                0 B
+├ ƒ /api/pricing/domain                  0 B                0 B
+├ ○ /basic                               165 B          87.3 kB
+├ ○ /billings                            165 B          87.3 kB
+├ ○ /contacts                            4.22 kB         219 kB
+├ ○ /forgot-password                     2.76 kB         201 kB
+├ ○ /i                                   939 B           151 kB
+├ ○ /invoice                             1.59 kB        93.8 kB
+├ ○ /login                               3.32 kB         196 kB
+├ ○ /notifications                       1.1 kB          113 kB
+├ ○ /organization-role                   871 B           113 kB
+├ ○ /personal-info                       7.03 kB         221 kB
+├ ○ /projects                            165 B          87.3 kB
+├ ○ /role/invitation                     4.73 kB         174 kB
+├ ○ /security                            1.98 kB        94.2 kB
+├ ○ /signup                              3.48 kB         202 kB
+├ ○ /social                              165 B          87.3 kB
+├ ○ /support                             165 B          87.3 kB
+└ ○ /test                                237 B          87.4 kB
+
+
+
+
+############################################
+    "eslint-plugin-jsdoc": "^50.2.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+############################################
+    

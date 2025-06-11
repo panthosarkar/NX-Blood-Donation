@@ -1,0 +1,7 @@
+.auth_section_wrapper {
+  @apply size-full flex justify-center items-center bg-[#ebebeb] overflow-auto;
+}
+
+.auth_section_content {
+  @apply bg-white sm:rounded-15 flex flex-col justify-center sm:justify-normal flex-nowrap w-full sm:w-[490px] sm:h-auto max-w-full sm:max-w-[calc(100%_-_50px)] min-h-[185px] overflow-hidden;
+}

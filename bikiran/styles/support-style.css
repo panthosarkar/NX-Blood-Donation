@@ -1,0 +1,9 @@
+.support-table-cell-mobile {
+  @apply px-[10px] py-[5px] leading-normal text-sm;
+}
+.support-chat-comp-container {
+  @apply relative  items-center lg:px-0  md:px-22 px-3 left-1/2 -translate-x-1/2;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}

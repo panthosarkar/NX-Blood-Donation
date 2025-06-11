@@ -1,0 +1,6 @@
+/* Input field focus */
+/* Error handling */
+.custom-field .error,
+.custom-field > .error {
+    border-color: #ff0102 !important;
+}

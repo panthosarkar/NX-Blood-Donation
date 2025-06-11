@@ -1,0 +1,10 @@
+.navbar_wrapper {
+  @apply flex flex-col justify-between fixed top-0 left-0 bg-white w-full h-[120px] lg:h-16.5 z-10;
+}
+.navbar_container {
+  @apply bg-white w-full h-16.5 flex items-center justify-between pr-5;
+}
+
+.navbar_wrapper.position-high {
+  @apply shadow-[8px_10px_80px_rgb(0_15_55_/_10%)];
+}

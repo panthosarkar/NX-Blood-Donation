@@ -1,0 +1,100 @@
+CustomDropdown Component
+The CustomDropdown component is a customizable dropdown menu built with React and Tailwind CSS.
+
+******Usage******
+
+1. Importing the Component:
+-------------------------------------------
+CODE- ################################################################ -CODE
+
+import CustomDropdown from './CustomDropdown';
+
+CODE- ################################################################ -CODE
+
+2. Setting Up State for Selected Option:
+-------------------------------------------
+- Define a state to manage the selected option:
+
+CODE- ################################################################ -CODE
+
+import { useState } from 'react';
+
+const [selected, setSelected] = useState({});
+
+CODE- ################################################################ -CODE
+
+3. Providing Options:
+-------------------------------------------
+- Use the addOption helper function to create options for the dropdown. Each option should have an id, logo, title, and value:
+
+const options = {
+  [{id:1, logo:logo.svg, title:"title", value:"value"}].map((i) => addOption(i.id, i.logo, i.title, i.value))
+};
+here:
+- addOption() takes params of - id, logo, title, value
+
+
+4. Using the CustomDropdown Component:
+-------------------------------------------
+- Render the CustomDropdown component, providing the required props:
+
+CODE- ################################################################ -CODE
+
+<div className="h-[50px] w-full max-w-[220px]">
+  <CustomDropdown
+    defaultLogo={selected?.logo}
+    defaultValue={selected?.title}
+    onSelect={setSelected}
+    selected={selected}
+    options={options}
+  />
+</div>
+
+CODE- ################################################################ -CODE
+
+5. Props:
+-------------------------------------------
+*defaultLogo: The default logo to display in the dropdown button before any option is selected.
+
+*defaultValue: The default value to display in the dropdown button before any option is selected.
+
+*onSelect: A callback function that is called when an option is selected. The selected option is passed as an argument to this function.
+
+*selected: The currently selected option.
+
+*options: An array of option objects. Each option should have an id, logo, title, and value.
+
+- Here's a complete example combining all the steps:
+
+CODE- ################################################################ -CODE
+
+import { useState } from 'react';
+import CustomDropdown, { addOption } from './CustomDropdown';
+
+const MyComponent = () => {
+  const [selected, setSelected] = useState({});
+
+  const options = [
+    addOption(1, null, 'Option 1', 1),
+    addOption(2, null, 'Option 2', 2),
+    addOption(3, null, 'Option 3', 3)
+  ];
+
+  return (
+    <div className="h-[50px] w-full max-w-[220px]">
+      <CustomDropdown
+        defaultLogo={selected?.logo}
+        defaultValue={selected?.title}
+        onSelect={setSelected}
+        selected={selected}
+        options={options}
+      />
+    </div>
+  );
+};
+
+export default MyComponent;
+
+CODE- ################################################################ -CODE
+
+This example demonstrates how to import and use the CustomDropdown component, set up state management for the selected option, and provide options for the dropdown menu.
