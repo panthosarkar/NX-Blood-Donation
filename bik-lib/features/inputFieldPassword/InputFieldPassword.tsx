@@ -101,8 +101,8 @@ export const InputFieldPassword: FC<TInputFieldProps> = ({
                   <ImageComponent
                     src={
                       showPassword
-                        ? "https://files.bikiran.com/assets/images/icon/icon-pass-show.svg"
-                        : "https://files.bikiran.com/assets/images/icon/icon-pass-hide.svg"
+                        ? "https://files.src.com/assets/images/icon/icon-pass-show.svg"
+                        : "https://files.src.com/assets/images/icon/icon-pass-hide.svg"
                     }
                     alt="eye"
                     width={0}
@@ -143,7 +143,7 @@ export const InputFieldPassword: FC<TInputFieldProps> = ({
             <ImageComponent
               alt="generate"
               src={
-                "https://files.bikiran.com/assets/images/icon/icon-generate-inactive.svg"
+                "https://files.src.com/assets/images/icon/icon-generate-inactive.svg"
               }
               width={0}
               height={0}
@@ -152,7 +152,7 @@ export const InputFieldPassword: FC<TInputFieldProps> = ({
             <ImageComponent
               alt="generate"
               src={
-                "https://files.bikiran.com/assets/images/icon/icon-re-generate.svg"
+                "https://files.src.com/assets/images/icon/icon-re-generate.svg"
               }
               width={0}
               height={0}

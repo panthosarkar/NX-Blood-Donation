@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     ".next/types/**/*.js",
     "lib/utils.js",
-    "bikiran/components/manage-application/components/table/TableActionButton.tsx"
+    "src/components/manage-application/components/table/TableActionButton.tsx"
   ],
   "exclude": ["node_modules"]
 }

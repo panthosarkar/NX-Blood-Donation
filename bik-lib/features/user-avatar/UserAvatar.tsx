@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import Image from "next/image";
-import { icons } from "@/bikiran/lib/icons";
+import { icons } from "@/src/lib/icons";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/bikiran/components/ui/avatar";
+} from "@/src/components/ui/avatar";
 import { cn } from "@/bik-lib/utils/cn";
 import React from "react";
 import { TInputChangeEvent } from "@/bik-lib/types/event";

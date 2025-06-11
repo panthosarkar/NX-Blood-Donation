@@ -7,7 +7,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-} from "@/bikiran/components/ui/drawer";
+} from "@/src/components/ui/drawer";
 import { cn } from "@/bik-lib/utils/cn";
 import {
   TDrawerDividerProps,

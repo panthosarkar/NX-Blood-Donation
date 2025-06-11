@@ -11,7 +11,7 @@ const CustomFooterSection = () => {
       </div>
       <div className=" w-full flex justify-center mt-5">
         <div className="lg:mx-5 mx-2 lg:w-3/5 text-center text-[#BFD0FF] md:text-xl text-sm font-normal leading-8">
-          Join the many businesses who trust BIKIRAN for their domain, hosting,
+          Join the many businesses who trust src for their domain, hosting,
           and application needs. Start your journey today and see the difference
           with our premium solutions.
         </div>

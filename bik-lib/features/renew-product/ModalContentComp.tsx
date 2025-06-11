@@ -2,7 +2,7 @@
 // import { useAuth2 } from "@/bik-lib/context/auth/Auth2Provider";
 // import { TRenewData } from "./renewProductTypes";
 // import { useTemplate } from "@/bik-lib/context/template/TemplateProvider";
-// import { useHostingInfo } from "@/bikiran/components/hosting-manage/context/HostingInfoProvider";
+// import { useHostingInfo } from "@/src/components/hosting-manage/context/HostingInfoProvider";
 // import { FC, useEffect, useState } from "react";
 // import { ApiCreateRenewInvoice, ApiLoadRenewData } from "./RenewOperations";
 // import RenewProductHostingComp from "./RenewProductHostingComp";

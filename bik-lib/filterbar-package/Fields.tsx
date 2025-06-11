@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { TInputChangeEvent } from "@/bik-lib/types/event";
 import { cn } from "@/bik-lib/utils/cn";
-import { InputField, Select } from "@bikiran/inputs";
-import { TUser } from "@/bikiran/shared/user-search/UserSearchType";
+import { InputField, Select } from "@src/inputs";
+import { TUser } from "@/src/shared/user-search/UserSearchType";
 import { InputDate, SelectField } from "@/bik-lib/lib/InputFields";
 import { addOption } from "@/bik-lib/utils/option";
 import capitalizeFirstLetter from "@/bik-lib/utils/capitalizeFirstLetter";

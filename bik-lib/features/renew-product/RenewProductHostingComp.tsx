@@ -1,7 +1,6 @@
-
 import { FC } from "react";
 import { TRenewData } from "./renewProductTypes";
-import { Checkbox } from "@/bikiran/components/ui/checkbox";
+import { Checkbox } from "@/src/components/ui/checkbox";
 import { showCurrencySign, showInt } from "@/bik-lib/utils/show";
 import capitalizeFirstLetter from "@/bik-lib/utils/capitalizeFirstLetter";
 
@@ -26,15 +25,17 @@ const RenewProductHostingComp: FC<TProps> = ({
   return (
     <>
       <div
-        className={` border-[#E0C1FF] flex items-stretch justify-between gap-[15px] pl-3 pr-5 py-5 cursor-pointer ${isSelected ? "border rounded-[13px]" : ""
-          }`}
+        className={` border-[#E0C1FF] flex items-stretch justify-between gap-[15px] pl-3 pr-5 py-5 cursor-pointer ${
+          isSelected ? "border rounded-[13px]" : ""
+        }`}
         onClick={setSelectedData}
       >
         <div className="flex items-center gap-[15px] overflow-hidden">
           <Checkbox
             id={`${data?.subscriptionId}`}
-            className={`size-7 bg-secondary border border-primary-500 ${isChecked ? "bg-secondary" : "bg-white"
-              }`}
+            className={`size-7 bg-secondary border border-primary-500 ${
+              isChecked ? "bg-secondary" : "bg-white"
+            }`}
             onChange={setSelectedData}
             checked={isChecked}
           />
@@ -68,7 +69,9 @@ const RenewProductHostingComp: FC<TProps> = ({
           </div>
         </div>
       </div>
-      <div className={`border-b border-[#E0C1FF] last:border-b-0 mx-2.5 ${isSelected ? "border-b-0" : ""}`}></div>
+      <div
+        className={`border-b border-[#E0C1FF] last:border-b-0 mx-2.5 ${isSelected ? "border-b-0" : ""}`}
+      ></div>
     </>
   );
 };

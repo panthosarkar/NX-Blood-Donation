@@ -31,7 +31,7 @@ function ComProvider({ children }) {
         // Generate a Random ID
         const id = Math.random().toString(36).substring(7);
         const head = {
-          appId: "bikiran",
+          appId: "src",
           requestId: id,
           dateTime: new Date().toISOString(),
           host: window.location.host,

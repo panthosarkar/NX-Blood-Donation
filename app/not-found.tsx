@@ -8,7 +8,7 @@ export default function NotFound() {
         <div>
           <div className="w-60 sm:w-94 mb-2.5">
             <Image
-              src="https://files.bikiran.com/assets/images/opps-text.svg"
+              src="https://files.src.com/assets/images/opps-text.svg"
               alt="Oops"
               width={0}
               height={0}

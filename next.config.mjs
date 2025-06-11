@@ -9,19 +9,19 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "demo.io.bikiran.com",
+        hostname: "demo.io.src.com",
       },
       {
         protocol: "https",
-        hostname: "io.bikiran.com",
+        hostname: "io.src.com",
       },
       {
         protocol: "https",
-        hostname: "io.bikiran.win",
+        hostname: "io.src.win",
       },
       {
         protocol: "https",
-        hostname: "files.bikiran.com",
+        hostname: "files.src.com",
       },
       {
         protocol: "https",
@@ -33,7 +33,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "bikiran.com",
+        hostname: "src.com",
       },
     ],
   },

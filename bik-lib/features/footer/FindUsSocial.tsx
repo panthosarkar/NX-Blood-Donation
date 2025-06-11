@@ -14,17 +14,17 @@ const FindUsSocial = ({
   const links = [
     {
       title: "Facebook",
-      url: "https://www.facebook.com/bikiran12",
+      url: "https://www.facebook.com/src12",
       icon: footerIcons.iconFacebook,
     },
     {
       title: "YouTube",
-      url: "https://www.youtube.com/@bikiranofficial",
+      url: "https://www.youtube.com/@srcofficial",
       icon: footerIcons.iconYoutube,
     },
     {
       title: "LinkedIn",
-      url: "https://www.linkedin.com/company/bikiran-com/about/",
+      url: "https://www.linkedin.com/company/src-com/about/",
       icon: footerIcons.iconLinkedin,
     },
     // {
@@ -34,7 +34,7 @@ const FindUsSocial = ({
     // },
     {
       title: "GitHub",
-      url: "https://github.com/bikirandev",
+      url: "https://github.com/srcdev",
       icon: footerIcons.iconGithub,
     },
   ];

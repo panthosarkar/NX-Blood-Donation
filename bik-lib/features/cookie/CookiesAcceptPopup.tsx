@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getBaseDomain, getBikiranUrl } from "@/bik-lib/utils/Env";
+import { getBaseDomain, getsrcUrl } from "@/bik-lib/utils/Env";
 import Cookie from "@/bik-lib/utils/Cookie";
 
 const CookiesAcceptPopup = () => {
@@ -33,7 +33,7 @@ const CookiesAcceptPopup = () => {
         This site uses cookies. By continuing to use this website, you agree to
         their use. For details, please check our{" "}
         <a
-          href={getBikiranUrl() + "/legal/privacy-policy"}
+          href={getsrcUrl() + "/legal/privacy-policy"}
           target="_blank"
           className="text-secondary"
         >

@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import iconDefaultApp from "./icon-default-app.svg";
 import { TApp } from "@/bik-lib/types/app";
-// import { icons } from "@/bikiran/lib/icons";
+// import { icons } from "@/src/lib/icons";
 
 const ServiceApp: React.FC<{ app: TApp }> = ({ app }) => {
   return (
     <div className=" relative flex justify-end">
-      {/* {"Bikiran" === app.name && (
+      {/* {"src" === app.name && (
         <div className="absolute float-left">
           <Image
             src={icons.iconTickV2}

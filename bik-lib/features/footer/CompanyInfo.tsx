@@ -1,17 +1,17 @@
 import Link from "next/link";
-import { getBikiranUrl } from "@/bik-lib/utils/Env";
+import { getsrcUrl } from "@/bik-lib/utils/Env";
 
 const links = [
   {
-    url: `${getBikiranUrl()}/about`,
+    url: `${getsrcUrl()}/about`,
     text: "About Us",
   },
   {
-    url: `${getBikiranUrl()}/services`,
+    url: `${getsrcUrl()}/services`,
     text: "Service",
   },
   {
-    url: `${getBikiranUrl()}/contact`,
+    url: `${getsrcUrl()}/contact`,
     text: "Contact Us",
   },
 ];

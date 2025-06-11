@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getBikiranUrl } from "@/bik-lib/utils/Env";
+import { getsrcUrl } from "@/bik-lib/utils/Env";
 
 const links = [
   {
-    url: `${getBikiranUrl()}/legal/terms-of-service/`,
+    url: `${getsrcUrl()}/legal/terms-of-service/`,
     text: "Terms & Condition",
   },
   {
-    url: `${getBikiranUrl()}/services/hosting/web`,
+    url: `${getsrcUrl()}/services/hosting/web`,
     text: "Our Pricing Plans",
   },
 ];

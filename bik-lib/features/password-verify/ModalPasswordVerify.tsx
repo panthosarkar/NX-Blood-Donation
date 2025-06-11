@@ -10,10 +10,10 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/bikiran/components/ui/dialog";
+} from "@/src/components/ui/dialog";
 import { useTemplate } from "@/bik-lib/context/template/TemplateProvider";
-import { InputField } from "@bikiran/inputs";
-import { Button } from "@bikiran/button";
+import { InputField } from "@src/inputs";
+import { Button } from "@src/button";
 
 type Props = {
   saveClick: () => void;

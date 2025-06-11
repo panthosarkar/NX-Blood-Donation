@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/bikiran/components/ui/dialog";
+} from "@/src/components/ui/dialog";
 import { TFormEvent, TInputChangeEvent, TState } from "@/bik-lib/types/event";
 import { TStatusTemplate } from "@/bik-lib/context/template/TemplateProvider";
 import capitalizeFirstLetter from "@/bik-lib/utils/capitalizeFirstLetter";

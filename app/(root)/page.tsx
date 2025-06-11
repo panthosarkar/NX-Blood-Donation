@@ -3,8 +3,8 @@
 // import { usePathname, useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import { getAccountUrl } from "@/bik-lib/utils/Env";
-// import links from "@/bikiran/shared/adv-menu/links";
-// import { PageLoading } from "@bikiran/utils";
+// import links from "@/src/shared/adv-menu/links";
+// import { PageLoading } from "@src/utils";
 // export default function NotFound() {
 //   const pathname = usePathname();
 //   const router = useRouter();

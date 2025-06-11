@@ -1,5 +1,5 @@
 import { useApp } from "@/bik-lib/context/AppProvider";
-import { CurrencySelector } from "@bikiran/utils";
+import { CurrencySelector } from "@src/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -54,7 +54,7 @@ const AddressInfo = ({
           <Link href="/" className={"logo w-40 h-12"}>
             <Image
               src={footerIcons.logo}
-              alt="Bikiran"
+              alt="src"
               width={100}
               height={100}
               className="w-full h-auto"
@@ -97,7 +97,7 @@ const AddressInfo = ({
             icon={footerIcons.mail}
             alt="email"
             type="email"
-            text="info@bikiran.com - support@bikiran.com"
+            text="info@src.com - support@src.com"
           />
         </div>
       </div>

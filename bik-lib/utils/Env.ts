@@ -33,15 +33,15 @@ const subDomainMap: Record<string, string> = {
   drive: `http://localhost:7212`,
   admin: `http://localhost:7215`,
   support: `http://localhost:7216`,
-  api: `https://io.bikiran.win`,
+  api: `https://io.src.win`,
   api2:
     process.env.NEXT_PUBLIC_LOCAL_API === "true"
       ? `http://localhost:5010`
-      : `https://api2.bikiran.win`,
+      : `https://api2.src.win`,
   api3:
     process.env.NEXT_PUBLIC_LOCAL_API === "true"
       ? `http://localhost:7301`
-      : `https://api3.bikiran.win`,
+      : `https://api3.src.win`,
 };
 
 export const isDev = process.env.NEXT_PUBLIC_MODE === "dev";
@@ -87,8 +87,8 @@ export const getBaseDomain = (): string => {
   return `${d.name}.${mode}`;
 };
 
-// https://www.bikiran.com/
-export function getBikiranUrl(): string {
+// https://www.src.com/
+export function getsrcUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
   if (mode === "dev") {
@@ -98,7 +98,7 @@ export function getBikiranUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.WWW}.${d.name}.${mode}`;
 }
 
-// https://www.hosting.bikiran.com/
+// https://www.hosting.src.com/
 export function getHostingUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
@@ -109,7 +109,7 @@ export function getHostingUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.HOSTING}.${d.name}.${mode}`;
 }
 
-// https://www.domain.bikiran.com/
+// https://www.domain.src.com/
 export function getDomainUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
@@ -120,7 +120,7 @@ export function getDomainUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.DOMAIN}.${d.name}.${mode}`;
 }
 
-// https://www.appocean.bikiran.com/
+// https://www.appocean.src.com/
 export function getAppoceanUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
@@ -131,7 +131,7 @@ export function getAppoceanUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.APPOCEAN}.${d.name}.${mode}`;
 }
 
-// https://www.admanage.bikiran.com/
+// https://www.admanage.src.com/
 export function getAdManageUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
@@ -142,7 +142,7 @@ export function getAdManageUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.ADMANAGE}.${d.name}.${mode}`;
 }
 
-// https://www.support.bikiran.com/
+// https://www.support.src.com/
 export function getAdminUrl(): string {
   const d = getDomainObject();
   const mode = getMode();
@@ -153,7 +153,7 @@ export function getAdminUrl(): string {
   return `https://${SUB_DOMAIN_NAMES.ADMIN}.${d.name}.${mode}`;
 }
 
-// https://www.support.bikiran.com/
+// https://www.support.src.com/
 export function getSupportUrl(): string {
   const d = getDomainObject();
   const mode = getMode();

@@ -57,14 +57,14 @@ const CartCollectionSharePopup: React.FC<TProps> = ({ closeClick }) => {
               type="text"
               name="cart"
               onChange={() => {}}
-              value="https://bikiran.com/cart/123456rtfgbhrtfdhbtfdrhyfdrhytfdrhytfdrghytfdrgh"
+              value="https://src.com/cart/123456rtfgbhrtfdhbtfdrhyfdrhytfdrhytfdrghytfdrgh"
               disabled
               className="w-full h-10 py-2.5 text-sm overflow-hidden text-ellipsis"
             />
 
             <button
               type="button"
-              onClick={() => copy("https://bikiran.com/cart/123456")}
+              onClick={() => copy("https://src.com/cart/123456")}
               className="w-7"
             >
               <Image

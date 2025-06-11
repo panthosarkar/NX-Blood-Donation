@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { isDev } from "@/bik-lib/utils/Env";
-import { useAuth } from "@/bikiran/context/AuthProvider";
-import { useCom } from "@/bikiran/context/ComProvider";
+import { useAuth } from "@/src/context/AuthProvider";
+import { useCom } from "@/src/context/ComProvider";
 
 const CrossPage = () => {
   const com = useCom();
@@ -77,13 +77,13 @@ const CrossPage = () => {
 
 const allowedOrigin =
   typeof window !== "undefined" &&
-  (isDev || window.location.host === "accounts-d.bikiran.com")
+  (isDev || window.location.host === "accounts-d.src.com")
     ? ["http://localhost:5000"]
     : [
-        "https://www.bikiran.com",
-        "https://admins.bikiran.com",
-        "https://push.bikiran.com",
-        "https://console.bikiran.com",
+        "https://www.src.com",
+        "https://admins.src.com",
+        "https://push.src.com",
+        "https://console.src.com",
       ];
 
 export default CrossPage;

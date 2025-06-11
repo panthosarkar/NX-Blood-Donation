@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { TAuthInfo } from "@/bik-lib/context/auth/authTypes";
 import { CrossIcon } from "./icons";
-import { getAccountUrl, getBikiranUrl } from "@/bik-lib/utils/Env";
+import { getAccountUrl, getsrcUrl } from "@/bik-lib/utils/Env";
 import Link from "next/link";
 import ProfileMenuList from "./ProfileMenuList";
 import ProfileUserInformation from "./ProfileUserInformation";
@@ -21,11 +21,11 @@ type TTerm = {
 const termsArr: TTerm[] = [
   {
     title: "Privacy Policy",
-    link: `${getBikiranUrl()}/legal/privacy-policy/`,
+    link: `${getsrcUrl()}/legal/privacy-policy/`,
   },
   {
     title: "Terms of Service",
-    link: `${getBikiranUrl()}/legal/terms-of-service/`,
+    link: `${getsrcUrl()}/legal/terms-of-service/`,
   },
 ];
 
@@ -60,7 +60,7 @@ const ProfileMenuPopup: FC<TProps> = ({
               target="_blank"
               className="p-[7px_16px] border border-[#D780DC] rounded-10 text-[#AE00B9] text-center"
             >
-              Manage Your Bikiran Account
+              Manage Your src Account
             </Link>
           </div>
 

@@ -6,12 +6,9 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/bikiran/components/ui/dialog";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/bikiran/components/ui/radio-group";
-import { Label } from "@/bikiran/components/ui/label";
+} from "@/src/components/ui/dialog";
+import { RadioGroup, RadioGroupItem } from "@/src/components/ui/radio-group";
+import { Label } from "@/src/components/ui/label";
 import { TInputChangeEvent } from "@/bik-lib/types/event";
 
 const Title: React.FC<{ children: React.ReactNode; className?: string }> = ({

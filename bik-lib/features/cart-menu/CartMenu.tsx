@@ -26,7 +26,7 @@ const CartMenuIcon: FC<{
     >
       <div className="size-full relative">
         <Image
-          src="https://files.bikiran.com/assets/images/icon/icon-cart.svg"
+          src="https://files.src.com/assets/images/icon/icon-cart.svg"
           alt="cart"
           width={0}
           height={0}

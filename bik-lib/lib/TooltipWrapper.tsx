@@ -3,7 +3,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/bikiran/components/ui/tooltip";
+} from "@/src/components/ui/tooltip";
 
 type Props = {
   children: ReactNode;

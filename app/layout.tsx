@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import Com2Provider from "@/bik-lib/context/auth/Com2Provider";
 // import Auth2Provider from "@/bik-lib/context/auth/Auth2Provider";
 import ComposeProviders from "@/bik-lib/lib/ComposeProviders";
-import "@/bikiran/styles/styles.css";
+import "@/src/styles/styles.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { getMode } from "@/bik-lib/utils/Env";
 import dynamic from "next/dynamic";
@@ -44,8 +44,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Bikiran Admin",
-  description: "Bikiran Admin Panel",
+  title: "Blood Donation",
+  description: "src Admin Panel",
 };
 
 type RootLayoutProps = {

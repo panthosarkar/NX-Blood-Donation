@@ -2,8 +2,8 @@
 import { cn } from "@/bik-lib/utils/cn";
 import { FC, ReactNode } from "react";
 import "./sidebar.css";
-import AdvMenu from "@/bikiran/shared/adv-menu/AdvMenu";
-import { useAdvMenu } from "@/bikiran/shared/adv-menu/AdvMenuProvider";
+import AdvMenu from "@/src/shared/adv-menu/AdvMenu";
+import { useAdvMenu } from "@/src/shared/adv-menu/AdvMenuProvider";
 
 type Props = {
   className?: string;

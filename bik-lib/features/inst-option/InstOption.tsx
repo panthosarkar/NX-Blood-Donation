@@ -9,7 +9,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/bikiran/components/ui/dropdown-menu";
+} from "@/src/components/ui/dropdown-menu";
 import { cn } from "@/bik-lib/utils/cn";
 
 // children is zero then show empty option

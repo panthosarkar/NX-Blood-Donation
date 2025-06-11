@@ -2,9 +2,9 @@ import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { TFilterField } from "./filterBarTypes";
 import { TFormEvent, TInputChangeEvent } from "@/bik-lib/types/event";
-import { TUser } from "@/bikiran/shared/user-search/UserSearchType";
+import { TUser } from "@/src/shared/user-search/UserSearchType";
 import { Fields } from "./Fields";
-import { Button } from "@bikiran/button";
+import { Button } from "@src/button";
 
 type TProps = {
   fields: TFilterField[];

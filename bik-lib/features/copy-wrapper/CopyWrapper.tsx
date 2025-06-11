@@ -1,5 +1,5 @@
 import Copy from "@/bik-lib/utils/Copy";
-import { icons } from "@/bikiran/lib/icons";
+import { icons } from "@/src/lib/icons";
 import Image from "next/image";
 import React, { FC } from "react";
 import { cn } from "../dropdown/CustomDropdown";

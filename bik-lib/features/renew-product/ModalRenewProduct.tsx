@@ -4,16 +4,16 @@
 //   DialogContent,
 //   DialogHeader,
 //   DialogTitle,
-// } from "@/bikiran/components/ui/dialog";
+// } from "@/src/components/ui/dialog";
 // import { FC, useEffect, useState } from "react";
 // import RenewProductHosting from "./RenewProductHostingComp";
 // import { TRenewData } from "./renewProductTypes";
 // import { showInt } from "@/bik-lib/utils/show";
 
-// import { ApiCreateRenewInvoice } from "@/bikiran/components/hosting-manage/HostingOperation";
+// import { ApiCreateRenewInvoice } from "@/src/components/hosting-manage/HostingOperation";
 // import { useAuth2 } from "@/bik-lib/context/auth/Auth2Provider";
 // import { ApiLoadRenewData } from "./RenewOperations";
-// import { useHostingInfo } from "@/bikiran/components/hosting-manage/context/HostingInfoProvider";
+// import { useHostingInfo } from "@/src/components/hosting-manage/context/HostingInfoProvider";
 // import ModalRenewSkeletonComp from "./ModalRenewSkeletonComp";
 
 // const ModalContent: FC = () => {

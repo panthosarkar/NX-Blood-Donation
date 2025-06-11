@@ -113,7 +113,7 @@ export type TAddressPayload = {
 //   "displayName": "Noman Gazi",
 //   "email": "nomangazix@gmail.com",
 //   "phone": "",
-//   "photoUrl": "https://storage.googleapis.com/bikiran-portal/profile_picture/2024-12-11/925595678bcea831ce2a820d214f14c1.jpg",
+//   "photoUrl": "https://storage.googleapis.com/src-portal/profile_picture/2024-12-11/925595678bcea831ce2a820d214f14c1.jpg",
 //   "status": "active",
 //   "userProfile": null,
 //   "primaryIds": [],

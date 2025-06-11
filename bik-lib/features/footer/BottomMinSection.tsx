@@ -16,16 +16,15 @@ const BottomMiniSection = ({
       style={{
         borderTopColor: dark ? "rgba(149, 140, 255, 0.4)" : "",
       }}
-      
     >
       <div className="text-sm leading-10 md:leading-[70px] flex justify-center lg:justify-start items-center lg:w-1/2">
         &copy; {new Date().getFullYear()} All Rights Reserved by&nbsp;
         <Link
-          href="https://bikiran.com"
+          href="https://src.com"
           target="_blank"
           className="text-[rgba(174,0,185)] flex items-center gap-1"
         >
-          <span>Bikiran.com</span>
+          <span>src.com</span>
           <div className="size-3 inline-block text-primary">
             <Image
               src={footerIcons.linkArrow}

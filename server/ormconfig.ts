@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import path from "path";
-import { getDBConnectionString } from "@/bikiran/utils/EnvTS";
+import { getDBConnectionString } from "@/src/utils/EnvTS";
 
 export const AppDataSource = new DataSource({
   type: "postgres",

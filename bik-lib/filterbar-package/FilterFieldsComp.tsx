@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { TFormEvent, TInputChangeEvent } from "@/bik-lib/types/event";
-import { TUser } from "@/bikiran/shared/user-search/UserSearchType";
+import { TUser } from "@/src/shared/user-search/UserSearchType";
 import { TFilterField } from "./filterBarTypes";
-import { Button } from "@bikiran/button";
+import { Button } from "@src/button";
 
 const FilterFieldsComp: FC<{
   fields: TFilterField[];

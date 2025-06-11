@@ -1,10 +1,10 @@
 import { useAuth2 } from "@/bik-lib/context/auth/Auth2Provider";
 import { TInputChangeEvent } from "@/bik-lib/types/event";
-import UserPopover from "@/bikiran/shared/user-search/UserPopover";
-import { ApiSearchUser } from "@/bikiran/shared/user-search/UserSearchOperation";
-import { TUser } from "@/bikiran/shared/user-search/UserSearchType";
-import { Button } from "@bikiran/button";
-import { InputField } from "@bikiran/inputs";
+import UserPopover from "@/src/shared/user-search/UserPopover";
+import { ApiSearchUser } from "@/src/shared/user-search/UserSearchOperation";
+import { TUser } from "@/src/shared/user-search/UserSearchType";
+import { Button } from "@src/button";
+import { InputField } from "@src/inputs";
 import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
 

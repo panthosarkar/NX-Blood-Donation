@@ -8,7 +8,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/bikiran/components/ui/select";
+} from "@/src/components/ui/select";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Flatpickr from "react-flatpickr";
@@ -126,8 +126,8 @@ const PasswordEyeIcon: FC<{
       <Image
         src={
           showPassword
-            ? "https://files.bikiran.com/assets/images/icon/icon-pass-show.svg"
-            : "https://files.bikiran.com/assets/images/icon/icon-pass-hide.svg"
+            ? "https://files.src.com/assets/images/icon/icon-pass-show.svg"
+            : "https://files.src.com/assets/images/icon/icon-pass-hide.svg"
         }
         alt="eye"
         width={0}

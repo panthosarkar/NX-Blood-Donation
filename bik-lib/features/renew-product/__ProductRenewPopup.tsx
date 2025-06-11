@@ -4,7 +4,7 @@
 // import { FC, useEffect, useRef } from "react";
 // import { productRenewIcons } from "./icons/productRenewIcons";
 // import RenewProductHosting from "./RenewProductHosting";
-// import { useHostingInfo } from "@/bikiran/components/hosting-manage/context/HostingInfoProvider";
+// import { useHostingInfo } from "@/src/components/hosting-manage/context/HostingInfoProvider";
 
 // type Props = {
 //   top?: number;

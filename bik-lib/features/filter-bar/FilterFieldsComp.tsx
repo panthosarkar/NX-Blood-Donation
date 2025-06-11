@@ -4,11 +4,11 @@ import { addOption } from "@/bik-lib/utils/option";
 import { TFilterField } from "./filterBarTypes";
 import { TFormEvent, TInputChangeEvent } from "@/bik-lib/types/event";
 import capitalizeFirstLetter from "@/bik-lib/utils/capitalizeFirstLetter";
-import { TUser } from "@/bikiran/shared/user-search/UserSearchType";
+import { TUser } from "@/src/shared/user-search/UserSearchType";
 import Image from "next/image";
-import { InputField, Select } from "@bikiran/inputs";
-import { Button } from "@bikiran/button";
-import FilterUser from "@/bikiran/shared/user-info/FilterUser";
+import { InputField, Select } from "@src/inputs";
+import { Button } from "@src/button";
+import FilterUser from "@/src/shared/user-info/FilterUser";
 
 type TProps = {
   fields: TFilterField[];

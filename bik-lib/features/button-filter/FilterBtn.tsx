@@ -1,5 +1,5 @@
-import { Dialog, DialogTrigger } from "@/bikiran/components/ui/dialog";
-import { icons } from "@/bikiran/lib/icons";
+import { Dialog, DialogTrigger } from "@/src/components/ui/dialog";
+import { icons } from "@/src/lib/icons";
 import Image from "next/image";
 import React from "react";
 import ModalFilter from "./Modal/ModalFilter";

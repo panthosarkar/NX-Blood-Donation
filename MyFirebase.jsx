@@ -28,10 +28,10 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCJ2KC9K8_YoryPS2YRoWU0rawJAwv6ik4",
-  authDomain: "bikiran-app.firebaseapp.com",
-  databaseURL: "https://bikiran-app-default-rtdb.firebaseio.com",
-  projectId: "bikiran-app",
-  storageBucket: "bikiran-app.appspot.com",
+  authDomain: "src-app.firebaseapp.com",
+  databaseURL: "https://src-app-default-rtdb.firebaseio.com",
+  projectId: "src-app",
+  storageBucket: "src-app.appspot.com",
   messagingSenderId: "1033935677392",
   appId: "1:1033935677392:web:d72516ee66ca1f7010fbd5",
   measurementId: "G-Y87K5R4V9Z"

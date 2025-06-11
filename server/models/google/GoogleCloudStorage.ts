@@ -3,10 +3,10 @@ import { Storage } from "@google-cloud/storage";
 import { env } from "process";
 
 // GCS_BUCKET_NAME = "media-files-ads";
-// GCS_PROJECT_ID = "bikiran-app";
+// GCS_PROJECT_ID = "src-app";
 // GCS_PRIVATE_KEY_ID = "c6cc53b2e74a88bcc45f12a12d592b90406b4e0d";
 // GCS_PRIVATE_KEY = "";
-// GCS_CLIENT_EMAIL = "media-files-ads@bikiran-app.iam.gserviceaccount.com";
+// GCS_CLIENT_EMAIL = "media-files-ads@src-app.iam.gserviceaccount.com";
 // GCS_CLIENT_ID = "115297158077790500191";
 
 const storage = new Storage({

@@ -3,7 +3,7 @@
 import React, { useEffect, ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { TAuthInfo } from "./authTypes";
-import { PageLoading } from "@bikiran/utils";
+import { PageLoading } from "@src/utils";
 
 const AuthPageWrapper: React.FC<{
   children: ReactNode;

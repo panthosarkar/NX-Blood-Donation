@@ -54,7 +54,7 @@ export const sendToChild = (
   iframe.contentWindow?.postMessage(
     {
       head: {
-        appId: "bikiran",
+        appId: "src",
         requestId,
         responseId,
         dateTime,
@@ -97,8 +97,8 @@ function Com2Provider({ children }: Com2ProviderProps) {
   useEffect(() => {
     // Receive message from child
     const requestHandler = ({ data, origin }: MessageEvent) => {
-      // Only process messages from the app "bikiran"
-      if (data.head?.appId !== "bikiran") {
+      // Only process messages from the app "src"
+      if (data.head?.appId !== "src") {
         return;
       }
 

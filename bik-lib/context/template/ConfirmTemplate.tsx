@@ -7,7 +7,7 @@ import {
   DialogTitle,
   Dialog,
   DialogBody,
-} from "@/bikiran/components/ui/dialog";
+} from "@/src/components/ui/dialog";
 import React, { FC } from "react";
 
 interface ConfirmProps {
