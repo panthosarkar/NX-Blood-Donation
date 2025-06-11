@@ -45,27 +45,21 @@ const HeaderLoginColumnComp: FC = ({}) => {
           </Link>
         </Button>
       </li>
-      <li>
-        <HeaderAddBtnComp />
-      </li>
-      <li>
-        <HeaderMenuNotificationComp />
-      </li>
+      <li>{/* <HeaderAddBtnComp /> */}</li>
+      <li>{/* <HeaderMenuNotificationComp /> */}</li>
       {/* {pathname !== "/cart" ? (
         <li className="flex -mx-1">
           <CartMenu cartData={cartItems} removeProduct={removeItem} />
         </li>
       ) : null} */}
-      <li className="-mx-1">
-        <HeaderServiceBtnComp />
-      </li>
+      <li className="-mx-1">{/* <HeaderServiceBtnComp /> */}</li>
       <li>
-        <ProfileManage
+        {/* <ProfileManage
           authFn={useAuth2}
           AuthCompWrapper={AuthCompWrapper}
           ImageComponent={Image}
           LinkComponent={Link}
-        />
+        /> */}
       </li>
     </ul>
   );

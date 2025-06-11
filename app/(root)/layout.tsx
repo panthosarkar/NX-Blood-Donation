@@ -30,7 +30,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       ]}
     >
       <HeaderSection />
-      <AdvMenuLayout className="">{children}</AdvMenuLayout>
+      {children}
+      {/* <AdvMenuLayout className=""></AdvMenuLayout> */}
       {/* Accept Cookies */}
       <CookiesAcceptPopup />
     </ComposeProviders>
