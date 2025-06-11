@@ -34,14 +34,14 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 /* flatpicker */
-.flatpickr-input[readonly] {
+/* .flatpickr-input[readonly] {
   background-image: url("../../public/assets/images/icons/icon-calender-line.svg");
   background-repeat: no-repeat;
   background-position: center left 10px;
   background-size: 20px;
   background-color: white;
   padding-left: 38px;
-}
+} */
 
 .flatpickr-months .flatpickr-month,
 .flatpickr-current-month .flatpickr-monthDropdown-months,

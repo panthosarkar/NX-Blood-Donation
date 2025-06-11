@@ -1,13 +1,13 @@
 .header_container {
-  @apply w-full h-[50px] bg-white px-5 border-b border-[#e8e7ec] print:hidden;
+  @apply w-full h-[72px] bg-transparent border-b border-[#e8e7ec] print:hidden px-[240px];
 }
 
 .web-header {
-  @apply fixed h-[50px] top-0 left-[66px] w-[calc(100%_-_66px)] z-20 border-b print:h-0;
+  @apply fixed h-[72px] top-0 left-0 z-20 w-full border-b print:h-0;
 }
 
 .web-header-gap {
-  @apply h-[50px] print:h-0;
+  @apply h-[72px] print:h-0;
 }
 
 .web-header.position-high .header_container {
@@ -28,7 +28,7 @@
 }
 
 .header_searchbar_cont {
-  @apply w-[calc(100%_-_40px)] sm:w-[calc(100%_-_100px)] md:w-[450px] lg:w-[630px] h-[50px] absolute top-1/2 transform -translate-y-1/2 left-0 sm:left-10 md:left-9 transition-all;
+  @apply w-[calc(100%_-_40px)] sm:w-[calc(100%_-_100px)] md:w-[450px] lg:w-[630px] h-[72px] absolute top-1/2 transform -translate-y-1/2 left-0 sm:left-10 md:left-9 transition-all;
 }
 
 /* navbar service menu */

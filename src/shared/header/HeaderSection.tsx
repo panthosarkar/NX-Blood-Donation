@@ -1,17 +1,17 @@
 "use client";
 import { FC } from "react";
-import { headerIcons } from "./icons/icons";
 import Link from "next/link";
 import Image from "next/image";
 import FixedHeaderControl from "./FixedHeaderControl";
 import HeaderLoginColumnComp from "./HeaderLoginColumnComp";
+import logo from "./icons/icon-comp-logo.svg"; // Adjust the path as necessary
 
 export const CompLogo: FC = () => {
   return (
     <Link href="/" className="flex items-center gap-2 ">
       <div className="w-32">
         <Image
-          src={headerIcons.iconBikLogo}
+          src={logo}
           alt="logo"
           width={0}
           height={0}

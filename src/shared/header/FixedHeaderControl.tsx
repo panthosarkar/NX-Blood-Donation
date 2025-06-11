@@ -29,7 +29,7 @@ const FixedHeaderControl: React.FC<TFixedHeaderControl> = ({ children }) => {
       <div className="web-header" ref={ref}>
         {children}
       </div>
-      <div className="web-header-gap" />
+      {/* <div className="web-header-gap" /> */}
     </>
   );
 };
