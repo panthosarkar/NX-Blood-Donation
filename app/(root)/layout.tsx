@@ -12,9 +12,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <div>
-      <Navbar/>
-        {children}
-        {/* <CookiesAcceptPopup /> */}
+      <Navbar />
+      <div className="relative top-[72px] container">{children}</div>
+      {/* <CookiesAcceptPopup /> */}
     </div>
     // <ComposeProviders
     //   components={[

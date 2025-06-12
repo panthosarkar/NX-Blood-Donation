@@ -18,7 +18,7 @@ const NavbarLogoComp = () => {
 
 const NavbarContainer = () => {
   return (
-    <div>
+    <div className="w-[1400px] flex items-center justify-between">
       <NavbarLogoComp />
       <Button className="text-primary">Sign In</Button>
     </div>
