@@ -1,9 +1,9 @@
 .header_container {
-  @apply w-full h-[72px] bg-transparent border-b border-[#e8e7ec] print:hidden px-[240px];
+  @apply h-[72px] bg-transparent print:hidden mx-0 my-auto w-[1400px];
 }
 
 .web-header {
-  @apply fixed h-[72px] top-0 left-0 z-20 w-full border-b print:h-0;
+  @apply fixed h-[72px] top-0 left-0 z-20 w-full print:h-0 flex items-center justify-center;
 }
 
 .web-header-gap {

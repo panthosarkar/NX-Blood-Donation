@@ -9,7 +9,7 @@ import logo from "./icons/icon-comp-logo.svg"; // Adjust the path as necessary
 export const CompLogo: FC = () => {
   return (
     <Link href="/" className="flex items-center gap-2 ">
-      <div className="w-32">
+      <div className="w-[250px]">
         <Image
           src={logo}
           alt="logo"
@@ -38,7 +38,7 @@ const HeaderSection: FC<{
 
           {/* <HeaderMenuColumnComp setSelectedMenu={setSelectedMenu} /> */}
 
-          <div className="w-[300px] xl:w-[400px]">
+          <div className="">
             <HeaderLoginColumnComp />
           </div>
         </div>

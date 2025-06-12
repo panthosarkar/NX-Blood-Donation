@@ -1,6 +1,0 @@
-.filter-inputs {
-  @apply !h-[33px] !py-0 !text-sm;
-}
-.filter-parent-class {
-  @apply grid grid-cols-[150px_auto] items-center gap-4 [&_label]:text-sm !h-[35px];
-}

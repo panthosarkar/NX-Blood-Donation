@@ -1,8 +1,5 @@
 import { ReactNode } from "react";
 import localFont from "next/font/local";
-// import InitProvider from "@/bik-lib/context/InitProvider";
-import Com2Provider from "@/bik-lib/context/auth/Com2Provider";
-// import Auth2Provider from "@/bik-lib/context/auth/Auth2Provider";
 import ComposeProviders from "@/bik-lib/lib/ComposeProviders";
 import "@/src/styles/styles.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -45,7 +42,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Blood Donation",
-  description: "src Admin Panel",
+  description: "Blood Donation App",
 };
 
 type RootLayoutProps = {
@@ -56,9 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} `}>
-        <ComposeProviders components={[Com2Provider]}>
-          {children}
-        </ComposeProviders>
+        <ComposeProviders components={[]}>{children}</ComposeProviders>
 
         {getMode() === "com" ? (
           <>

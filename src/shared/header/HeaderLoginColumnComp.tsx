@@ -16,17 +16,11 @@ const HeaderLoginColumnComp: FC = ({}) => {
   const pathname = usePathname();
 
   return (
-    <ul className="flex items-center justify-end gap-3.5 lg:gap-4">
-      <li>
-        <Button className="px-7.5 py-3 !bg-white !text-[#EF0000] !rounded-8">
-          Sign In
-        </Button>
-      </li>
-      <li></li>
-      <li></li>
-      <li className="-mx-1"></li>
-      <li></li>
-    </ul>
+    <div>
+      <Button className="px-7.5 py-3 !bg-white !text-[#EF0000] !rounded-8">
+        Sign In
+      </Button>
+    </div>
   );
 };
 
