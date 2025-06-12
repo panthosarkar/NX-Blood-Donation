@@ -1,5 +1,0 @@
-{
-  "files": [],
-  "dirs": ["src/utils"],
-  "ignoreFiles": ["_src/utils/AxiosAPI.js"]
-}
