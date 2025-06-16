@@ -20,7 +20,9 @@ const NavbarContainer = () => {
   return (
     <div className="w-[1400px] flex items-center justify-between">
       <NavbarLogoComp />
-      <Button className="text-primary">Sign In</Button>
+      <Button className="!text-primary leading-5 text-lg px-[30px] py-[13px] static !bg-white">
+        Sign In
+      </Button>
     </div>
   );
 };
