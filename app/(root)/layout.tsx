@@ -2,6 +2,8 @@ import Navbar from "@/src/shared/navbar-section/Navbar";
 import Image from "next/image";
 import { ReactNode } from "react";
 import backgroundImage from "@/public/assets/image/bg-body.svg";
+import backgroundComp1 from "@/public/assets/image/bg-section-comp1.svg";
+import backgroundComp2 from "@/public/assets/image/bg-section-comp2.svg";
 
 export const metadata = {
   title: "Blood Donation",
@@ -13,13 +15,27 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="relative min-h-screen">
+    <div className="max-h-screen">
+      {/* main bg image */}
       <Image
         alt=""
         src={backgroundImage}
-        fill
-        sizes="100vw"
-        className="!fixed top-0 right-0 object-right-top"
+        sizes="100vh"
+        className="h-screen absolute top-0 right-0"
+      />
+      {/* comp 1 */}
+      <Image
+        alt=""
+        src={backgroundComp1}
+        sizes="100vh"
+        className="absolute top-[207px] left-[56px]"
+      />
+      {/* comp2 */}
+      <Image
+        alt=""
+        src={backgroundComp2}
+        sizes="100vh"
+        className="absolute top-[800px] right-[113px]"
       />
       <Navbar />
       <div className="relative top-[72px] max-w-[1400px] mx-auto mt-[60px]">
