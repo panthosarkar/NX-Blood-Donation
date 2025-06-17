@@ -33,11 +33,12 @@ module.exports = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "hero-pattern": "url('/assets/image/bg-body.svg')",
         primary: {
           DEFAULT: "var(--primary)",
           50: "var(--primary-50)",
           100: "var(--primary-100)",
-          200 : "var(--primary-200)",
+          200: "var(--primary-200)",
           300: "var(--primary-300)",
           500: "var(--primary-500)",
           700: "var(--primary-700)",

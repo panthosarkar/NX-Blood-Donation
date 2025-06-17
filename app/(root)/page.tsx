@@ -1,9 +1,12 @@
-import React from 'react'
+import HomePage from "@/src/components/home-page/HomePage";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <HomePage />
+    </div>
+  );
+};
 
-export default page
+export default page;

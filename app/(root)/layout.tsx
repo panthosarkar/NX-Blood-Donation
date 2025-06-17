@@ -19,11 +19,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         src={backgroundImage}
         fill
         sizes="100vw"
-        className="object-cover fixed top-0 right-0"
-        priority
+        className="!fixed top-0 right-0 object-right-top"
       />
       <Navbar />
-      <div className="relative top-[72px] container">{children}</div>
+      <div className="relative top-[72px] max-w-[1400px] mx-auto mt-[60px]">
+        {children}
+      </div>
 
       {/* <CookiesAcceptPopup /> */}
     </div>
