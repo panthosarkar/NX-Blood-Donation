@@ -123,7 +123,7 @@
 
   .custom-scrollbar::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb {
-    @apply bg-secondary rounded-5;
+    @apply bg-primary rounded-5;
   }
 
   .no-scrollbar::-webkit-scrollbar {

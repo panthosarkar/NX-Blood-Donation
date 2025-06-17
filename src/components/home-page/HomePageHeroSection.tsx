@@ -6,12 +6,12 @@ import heroSectionImage from "@/public/assets/image/hero-section-img.svg";
 const HomePageHeroSection = () => {
   return (
     <div className="flex items-center justify-between">
-      <div className="w-[610px]">
-        <h1 className="text-[70px] leading-[85px] font-medium text-black">
-          One <span className="text-primary">Drop</span> Can Save a{" "}
+      <div className="w-[630px]">
+        <h1 className="text-[70px] leading-[85px] font-medium text-black text-nowrap">
+          One <span className="text-primary">Drop</span> Can Save <br />a{" "}
           <span className="text-primary">Life</span>
         </h1>
-        <p>
+        <p className="text-lg text-gray text-justify">
           Thousands of patients depend on blood donations every day. Your
           generosity can bring hope to accident victims, cancer patients, and
           newborns. Join the movement and become someone’s lifeline

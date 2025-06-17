@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import localFont from "next/font/local";
 import "@/src/styles/style.css";
 
-export const dm = localFont({
+const dm = localFont({
   src: [
     {
       path: "../public/assets/fonts/DMSans-Regular.ttf",
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {/* <ComposeProviders
           components={[Com2Provider, InitProvider, Auth2Provider]}
         > */}
-          {children}
+        {children}
         {/* </ComposeProviders> */}
 
         {/* {getMode() === "com" ? (
