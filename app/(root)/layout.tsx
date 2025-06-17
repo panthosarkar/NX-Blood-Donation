@@ -15,7 +15,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="max-h-screen">
+    <div className="max-h-screen overflow-auto relative pb-[300px]">
       {/* main bg image */}
       <Image
         alt=""

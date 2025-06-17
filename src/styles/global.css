@@ -29,7 +29,7 @@
     --primary-200: #f7a3a3;
     --primary-100: #f9cccc;
     --primary-50: #ef000033;
-    --secondary: #ae00b9;
+    --secondary: #ef0000;
     --secondary-700: #c74dce;
     --secondary-500: #d780dc;
     --secondary-300: #e7b3ea;
@@ -40,7 +40,7 @@
     --error: #ff0102;
     --success: #00b15b;
     --light-red: #dc3545;
-
+    --gray: #7b7b86;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -136,6 +136,19 @@
   }
 }
 
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker-popper {
+  z-index: 11 !important;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+}
 /* Modals */
 .modal-subtitle {
   @apply text-primary-700 text-sm;

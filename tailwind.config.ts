@@ -44,6 +44,9 @@ module.exports = {
           700: "var(--primary-700)",
           900: "var(--primary-900)",
         },
+        gray: {
+          DEFAULT: "var(--gray)",
+        },
         secondary: {
           DEFAULT: "var(--secondary)",
           50: "var(--secondary-50)",
