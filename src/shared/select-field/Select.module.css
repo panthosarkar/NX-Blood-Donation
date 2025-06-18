@@ -29,7 +29,7 @@
   @apply p-1;
 }
 .selectOptionPlaceholder {
-  @apply w-full rounded-sm px-[10px] py-[7px] flex items-center gap-2 text-sm hover:bg-[#f3f3f5] cursor-pointer;
+  @apply w-full rounded-sm px-[10px] py-[7px] flex items-center gap-2 text-sm hover:bg-primary-50 cursor-pointer;
 }
 .notIsValue {
   @apply bg-primary-50 hover:bg-[hsl(297,56%,94%)];
@@ -38,7 +38,7 @@
   @apply w-3;
 }
 .selectOption {
-  @apply w-full rounded-sm px-[10px] py-[7px] flex items-center text-sm hover:bg-[#f3f3f5] transition-colors cursor-pointer;
+  @apply w-full rounded-sm px-[10px] py-[7px] flex items-center text-sm hover:bg-primary-50 transition-colors cursor-pointer;
 }
 .isActive {
   @apply bg-primary-50 hover:bg-primary-50;

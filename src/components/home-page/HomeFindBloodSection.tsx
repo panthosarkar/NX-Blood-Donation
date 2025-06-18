@@ -79,7 +79,7 @@ const FindBloodFormComp = () => {
         </div>
         <Button
           type="submit"
-          className="bg-primary text-white px-6 py-3 rounded-lg self-center"
+          className="bg-primary text-white px-7.5 py-3 rounded-8 hover:bg-primary-50 hover:text-primary transition-all duration-300 ease-in-out self-center"
         >
           Search Available Donor
         </Button>
