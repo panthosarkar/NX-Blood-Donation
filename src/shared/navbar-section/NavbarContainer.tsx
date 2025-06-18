@@ -30,8 +30,24 @@ const NavbarLinks = () => {
   ];
 
   useEffect(() => {
-    if (pathname === "/") {
-      document.title = "Home - Blood Donation";
+    switch (pathname) {
+      case "/":
+        setActiveLink("/");
+        break;
+      case "/find-donor":
+        setActiveLink("/find-donor");
+        break;
+      case "/blood-request":
+        setActiveLink("/blood-request");
+        break;
+      case "/about":
+        setActiveLink("/about");
+        break;
+      case "/contact":
+        setActiveLink("/contact");
+        break;
+      default:
+        setActiveLink("/");
     }
   }, [pathname]);
 
