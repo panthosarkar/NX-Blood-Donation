@@ -50,3 +50,31 @@ export const contactInfo = [
     value: "Dhaka, Bangladesh",
   },
 ];
+
+// footer links
+export const linkInfo = [
+  {
+    title: "Information Links",
+    links: [
+      { name: "Home", url: "#", icon: "" },
+      { name: "About Us", url: "#", icon: "" },
+      { name: "Contact", url: "#", icon: "" },
+    ],
+  },
+  {
+    title: "Important Links",
+    links: [
+      { name: "Request Blood", url: "#", icon: "" },
+      { name: "Donate Blood", url: "#", icon: "" },
+      { name: "Find Donors", url: "#", icon: "" },
+    ],
+  },
+  {
+    title: "Social Links",
+    links: [
+      { name: "Facebook", url: "#", icon: icons.iconSolidFacebook },
+      { name: "Twitter", url: "#", icon: icons.iconSolidTwitter },
+      { name: "Instagram", url: "#", icon: icons.iconSolidInstagram },
+    ],
+  },
+];

@@ -11,6 +11,10 @@ import iconSolidEmail from "@/public/assets/image/icons/icon-email-solid.svg";
 import iconSolidPhone from "@/public/assets/image/icons/icon-phone-solid.svg";
 import iconSolidLocation from "@/public/assets/image/icons/icon-location-solid.svg";
 
+import iconSolidFacebook from "@/public/assets/image/icons/icon-facebook-solid.svg";
+import iconSolidInstagram from "@/public/assets/image/icons/icon-instagram-solid.svg";
+import iconSolidTwitter from "@/public/assets/image/icons/icon-x-solid.svg";
+
 export const icons = {
   imgAmbulance,
   imgBloodDonor,
@@ -22,4 +26,7 @@ export const icons = {
   iconSolidEmail,
   iconSolidPhone,
   iconSolidLocation,
+  iconSolidFacebook,
+  iconSolidInstagram,
+  iconSolidTwitter,
 };

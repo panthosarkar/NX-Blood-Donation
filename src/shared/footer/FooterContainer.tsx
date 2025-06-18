@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { FC } from "react";
 import logo from "@/public/assets/image/logo.svg";
-import { contactInfo } from "@/src/components/home-page/constant";
+import { contactInfo, linkInfo } from "@/src/components/home-page/constant";
 
 const FooterContactInfoComp: FC<{
   icon: string;
@@ -59,27 +59,60 @@ const FooterLogoAndTextComp = () => {
   );
 };
 
+const Links = ({ links }) => {
+  return (
+    <ul className="space-y-5">
+      {links.map((link) => (
+        <li key={link.name}>
+          <a href={link.url} className="text-gray font-medium">
+            {link.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 const FooterLinkComp = () => {
   return (
-    <div className="space-y-5">
-      <h3 className="text-lg font-semibold">Quick Links</h3>
-      <ul className="space-y-2">
-        <li>
-          <a href="#" className="text-gray hover:text-blue-500">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" className="text-gray hover:text-blue-500">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#" className="text-gray hover:text-blue-500">
-            Contact
-          </a>
-        </li>
-      </ul>
+    <div className="flex items-start justify-between">
+      {linkInfo?.map((section) => (
+        <div key={section.title} className="space-y-2.5">
+          <div>
+            <h4 className="text-2xl font-medium">{section.title}</h4>
+            <svg
+              width="75"
+              height="2"
+              viewBox="0 0 75 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="75" height="2" rx="1" fill="#EF0000" />
+            </svg>
+          </div>
+          {section.title === "Social Links" ? (
+            <ul className="space-y-5">
+              {section.links.map((link) => (
+                <li key={link.name} className="flex items-center gap-2">
+                  <Image
+                    src={link.icon}
+                    alt={link.name}
+                    width={100}
+                    height={100}
+                    sizes="100vw"
+                    className="size-6"
+                  />
+                  <a href={link.url} className="text-gray font-medium">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <Links links={section.links} />
+          )}
+        </div>
+      ))}
     </div>
   );
 };
