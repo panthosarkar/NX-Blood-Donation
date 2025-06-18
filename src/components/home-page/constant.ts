@@ -30,3 +30,23 @@ export const servicesList = [
     icon: icons.imgAmbulance,
   },
 ];
+
+//contact info
+
+export const contactInfo = [
+  {
+    icon: icons.iconSolidEmail,
+    title: "Email",
+    value: "info@bloodDonor.com",
+  },
+  {
+    icon: icons.iconSolidPhone,
+    title: "Phone",
+    value: "+880 1613 727 212",
+  },
+  {
+    icon: icons.iconSolidLocation,
+    title: "Location",
+    value: "Dhaka, Bangladesh",
+  },
+];

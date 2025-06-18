@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import backgroundImage from "@/public/assets/image/bg-body.svg";
 import backgroundComp1 from "@/public/assets/image/bg-section-comp1.svg";
 import backgroundComp2 from "@/public/assets/image/bg-section-comp2.svg";
+import Footer from "@/src/shared/footer/Footer";
 
 export const metadata = {
   title: "Blood Donation",
@@ -15,7 +16,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="max-h-screen overflow-auto relative pb-[300px] custom-scrollbar">
+    <div className="max-h-screen overflow-auto relative custom-scrollbar">
       {/* main bg image */}
       <Image
         alt=""
@@ -38,10 +39,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className="absolute top-[800px] right-[113px]"
       />
       <Navbar />
-      <div className="relative top-[72px] max-w-[1400px] mx-auto mt-[60px]">
+      <div className="relative top-[72px] max-w-[1400px] mx-auto mt-[60px] pb-[300px]">
         {children}
       </div>
-
+      <Footer />
       {/* <CookiesAcceptPopup /> */}
     </div>
     // <ComposeProviders
