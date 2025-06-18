@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-[#f3f3f3] font-dm font-normal text-base overflow-hidden;
+    @apply bg-[#ffffff] font-dm font-normal text-base overflow-hidden;
   }
 }
 

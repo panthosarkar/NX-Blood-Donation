@@ -3,6 +3,7 @@ import HomePageServices from "./HomePageServices";
 import HomePageHeroSection from "./HomePageHeroSection";
 import HomeFindBloodSection from "./HomeFindBloodSection";
 import HomeBloodRequestSection from "./HomeBloodRequestSection";
+import HomeNetworkSection from "./HomeNetworkSection";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,9 @@ const HomePage = () => {
       </section>
       <section>
         <HomeBloodRequestSection />
+      </section>
+      <section>
+        <HomeNetworkSection />
       </section>
     </div>
   );

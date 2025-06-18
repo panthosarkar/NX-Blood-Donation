@@ -8,7 +8,7 @@ const ServicesCardView = () => {
       {servicesList?.map((service) => (
         <div
           key={service.id}
-          className="w-[320px] h-[300px] bg-white rounded-xl shadow-lg p-5.5 flex flex-col items-center justify-center"
+          className="w-[320px] h-[300px] bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] p-5.5 flex flex-col items-center justify-center"
         >
           <Image
             src={service.icon}

@@ -23,7 +23,7 @@ const FindBloodFormComp = () => {
   };
 
   return (
-    <div className="w-full bg-white px-5 py-7.5 rounded-10">
+    <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
       <h3 className="text-2xl leading-5 font-medium text-center">
         Please Enter the required Field
       </h3>
