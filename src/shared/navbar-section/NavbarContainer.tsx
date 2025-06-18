@@ -40,7 +40,7 @@ const NavbarLinks = () => {
       {navLinks.map((link) => (
         <li
           key={link.name}
-          className={`text-lg font-medium cursor-pointer ${
+          className={`text-lg font-medium cursor-pointer hover:text-primary  transition-all ease-in-out duration-300 ${
             activeLink === link.path ? "text-primary" : "text-black"
           }`}
           onClick={() => setActiveLink(link.path)}
@@ -57,7 +57,7 @@ const NavbarContainer = () => {
     <div className="w-[1400px] flex items-center justify-between gap-20">
       <NavbarLogoComp />
       <NavbarLinks />
-      <Button className="!text-primary leading-5 text-lg px-[30px] py-[13px] !bg-white rounded-8 flex-shrink-0">
+      <Button className="!text-primary leading-5  text-lg px-[30px] py-3 border border-primary !bg-white rounded-8 flex-shrink-0">
         Sign In
       </Button>
     </div>

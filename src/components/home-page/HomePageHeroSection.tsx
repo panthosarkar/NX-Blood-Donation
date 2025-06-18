@@ -17,10 +17,10 @@ const HomePageHeroSection = () => {
           newborns. Join the movement and become someone’s lifeline
         </p>
         <div className="flex items-center gap-4 mt-[50px]">
-          <Button className="bg-primary text-white px-7.5 py-3 rounded-8">
+          <Button className="bg-primary text-white px-7.5 py-3 rounded-8 hover:bg-primary-50 hover:text-primary transition-all duration-300 ease-in-out">
             Blood Request
           </Button>
-          <Button className="!bg-primary-50 !text-primary px-7.5 py-3 rounded-8">
+          <Button className="!bg-primary-50 !text-primary px-7.5 py-3 rounded-8 hover:!bg-primary hover:!text-white transition-all duration-300 ease-in-out">
             Donate Blood
           </Button>
         </div>

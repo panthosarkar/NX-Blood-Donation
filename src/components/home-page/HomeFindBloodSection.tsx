@@ -2,12 +2,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import needBloodImg from "@/public/assets/image/need-blood-img.svg";
-import { AnimatedSelect, DateInputField, Select } from "@bikiran/inputs";
+import { DateInputField } from "@bikiran/inputs";
 import { TInputChangeEvent } from "@bikiran/inputs/dist/lib/types/InputType";
 import { bloodGroup } from "@/public/assets/constant/BloodGroup";
-import { addOption } from "@/library/utils/option";
-import capitalizeFirstLetter from "@/library/utils/capitalizeFirstLetter";
 import { Button } from "@bikiran/button";
+import Select from "@/src/shared/select-field/Select";
 
 const FindBloodFormComp = () => {
   const [formData, setFormData] = useState<Record<string, any>>({});
