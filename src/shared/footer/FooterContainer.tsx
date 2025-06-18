@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import logo from "@/public/assets/image/logo.svg";
 import { contactInfo, linkInfo } from "@/src/components/home-page/constant";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const FooterContactInfoComp: FC<{
   icon: string;
@@ -64,9 +66,12 @@ const Links = ({ links }) => {
     <ul className="space-y-5">
       {links.map((link) => (
         <li key={link.name}>
-          <a href={link.url} className="text-gray font-medium">
+          <Link
+            href={link.url}
+            className="text-gray font-medium hover:text-primary transition-all duration-300 ease-in-out"
+          >
             {link.name}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -93,7 +98,7 @@ const FooterLinkComp = () => {
           {section.title === "Social Links" ? (
             <ul className="space-y-5">
               {section.links.map((link) => (
-                <li key={link.name} className="flex items-center gap-2">
+                <li key={link.name} className="flex items-center gap-2 ">
                   <Image
                     src={link.icon}
                     alt={link.name}
@@ -102,9 +107,12 @@ const FooterLinkComp = () => {
                     sizes="100vw"
                     className="size-6"
                   />
-                  <a href={link.url} className="text-gray font-medium">
+                  <Link
+                    href={link.url}
+                    className="text-gray font-medium hover:text-primary transition-all duration-300 ease-in-out"
+                  >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

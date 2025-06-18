@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "@/public/assets/image/logo.svg";
 import { Button } from "@bikiran/button";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const NavbarLogoComp = () => {
   return (
@@ -61,7 +62,7 @@ const NavbarLinks = () => {
           }`}
           onClick={() => setActiveLink(link.path)}
         >
-          <a href={link.path}>{link.name}</a>
+          <Link href={link.path}>{link.name}</Link>
         </li>
       ))}
     </ul>

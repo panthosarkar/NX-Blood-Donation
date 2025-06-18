@@ -56,17 +56,17 @@ export const linkInfo = [
   {
     title: "Information Links",
     links: [
-      { name: "Home", url: "#", icon: "" },
-      { name: "About Us", url: "#", icon: "" },
-      { name: "Contact", url: "#", icon: "" },
+      { name: "Home", url: "/", icon: "" },
+      { name: "About Us", url: "/about", icon: "" },
+      { name: "Contact", url: "/contact", icon: "" },
     ],
   },
   {
     title: "Important Links",
     links: [
-      { name: "Request Blood", url: "#", icon: "" },
-      { name: "Donate Blood", url: "#", icon: "" },
-      { name: "Find Donors", url: "#", icon: "" },
+      { name: "Request Blood", url: "/blood-request", icon: "" },
+      { name: "Donate Blood", url: "/register", icon: "" },
+      { name: "Find Donors", url: "/find-donor", icon: "" },
     ],
   },
   {
