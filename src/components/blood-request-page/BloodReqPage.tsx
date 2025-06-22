@@ -1,82 +1,71 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ReqHeaderSection from "./ReqHeaderSection";
+import InputField from "@/src/shared/input/InputField";
 
 const BloodReqPage = () => {
+  type TFormData = {
+    full_name: string;
+    age?: string;
+    gender?: string;
+  };
+
+  const [formData, setFormData] = useState<TFormData>({
+    full_name: "",
+    age: "",
+    gender: "",
+  });
+
+  const handleAddReq = async () => {
+    try {
+    } finally {
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    if (name) {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
   return (
     <body className="bg-gray-50">
       <div className="container mx-auto max-w-4xl p-6 md:p-8 my-10 bg-white shadow-lg rounded-lg">
         <ReqHeaderSection />
 
-        <form action="#" method="POST">
+        <form method="POST" onSubmit={handleAddReq}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-            <div>
-              <label
-                htmlFor="fast-name"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Fast Name:
-              </label>
-              <input
-                type="text"
-                name="fast-name"
-                id="fast-name"
-                placeholder="Full Name"
-                className="input_donation"
-              />
-            </div>
+            <InputField
+              id="full_name"
+              label="Full Name"
+              value={formData.full_name}
+              name="full_name"
+              type="text"
+              onChange={handleChange}
+              placeholder="Type Your Full Name..."
+            />
+            <InputField
+              id="age"
+              label="Patient Age"
+              value={formData.age}
+              name="age"
+              type="text"
+              onChange={handleChange}
+              placeholder="Type Patient age..."
+            />
 
-            <div>
-              <label
-                htmlFor="last-name"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Last Name:
-              </label>
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                placeholder="Full Name"
-                className="input_donation"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="patient-age"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Patient Age:
-              </label>
-              <select
-                id="patient-age"
-                name="patient-age"
-                className="input_donation"
-              >
-                <option>Select number</option>
-                <option>0-17</option>
-                <option>18-30</option>
-                <option>31-45</option>
-                <option>46-60</option>
-                <option>60+</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                htmlFor="gender"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Gender:
-              </label>
-              <select id="gender" name="gender" className="input_donation">
-                <option>Select Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-                <option>Prefer not to say</option>
-              </select>
-            </div>
+            <InputField
+              id="gender"
+              label="Gender"
+              value={formData.gender}
+              name="gender"
+              type="text"
+              onChange={handleChange}
+              placeholder="Type Patient gender..."
+            />
 
             <div>
               <label
@@ -101,7 +90,6 @@ const BloodReqPage = () => {
                 <option>O-</option>
               </select>
             </div>
-
             <div>
               <label
                 htmlFor="amount"
@@ -118,7 +106,6 @@ const BloodReqPage = () => {
                 <option>5+ units</option>
               </select>
             </div>
-
             <div>
               <label
                 htmlFor="date-of-donation"
@@ -134,7 +121,6 @@ const BloodReqPage = () => {
                 className="input_donation"
               />
             </div>
-
             <div>
               <label
                 htmlFor="condition"
@@ -153,7 +139,6 @@ const BloodReqPage = () => {
                 <option>Emergency</option>
               </select>
             </div>
-
             <div className="md:col-span-2">
               <label
                 htmlFor="contact-number"
@@ -169,7 +154,6 @@ const BloodReqPage = () => {
                 className="input_donation"
               />
             </div>
-
             <div className="md:col-span-2">
               <label
                 htmlFor="location"
@@ -194,15 +178,14 @@ const BloodReqPage = () => {
                     aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                 </div>
               </div>
             </div>
-
             <div className="md:col-span-2 mt-1">
               <svg
                 className="w-full h-64 object-cover border border-gray-300 rounded-md bg-gray-100 text-gray-400"
@@ -222,7 +205,7 @@ const BloodReqPage = () => {
                 />
                 <path
                   d="M0 80 Q 50 60, 100 80 T 200 80"
-                  stroke-width="2"
+                  strokeWidth="2"
                   className="stroke-current text-blue-400 opacity-60"
                   fill="none"
                 />
@@ -241,7 +224,7 @@ const BloodReqPage = () => {
                 <text
                   x="50%"
                   y="50%"
-                  dominant-baseline="middle"
+                  dominantBaseline="middle"
                   text-anchor="middle"
                   font-family="sans-serif"
                   font-size="10px"
@@ -251,7 +234,6 @@ const BloodReqPage = () => {
                 </text>
               </svg>
             </div>
-
             <div className="md:col-span-2">
               <label
                 htmlFor="reason"
