@@ -74,9 +74,12 @@ const NavbarContainer = () => {
     <div className="w-[1400px] flex items-center justify-between gap-20">
       <NavbarLogoComp />
       <NavbarLinks />
-      <Button className="!text-primary leading-5  text-lg px-[30px] py-3 border border-primary !bg-white rounded-8 flex-shrink-0">
+      <Link
+        href={"/sign-in"}
+        className="!text-primary leading-5  text-lg px-[30px] py-3 border border-primary !bg-white rounded-8 flex-shrink-0"
+      >
         Sign In
-      </Button>
+      </Link>
     </div>
   );
 };
