@@ -1,11 +1,7 @@
 import BloodReqPage from "@/src/components/blood-request-page/BloodReqPage";
 
 const page = () => {
-  return (
-    <div>
-      <BloodReqPage />
-    </div>
-  );
+  return <BloodReqPage />;
 };
 
 export default page;

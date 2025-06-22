@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import ReqHeaderSection from "./ReqHeaderSection";
 import InputField from "@/src/shared/input/InputField";
-import SelectField from "@/src/shared/input/selectField";
 import ReqMapSection from "./ReqMapSection";
+import SelectField from "@/src/shared/input/SelectField";
 
 const BloodReqPage = () => {
   type TFormData = {
