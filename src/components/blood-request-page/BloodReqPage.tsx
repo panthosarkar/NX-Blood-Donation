@@ -1,21 +1,11 @@
 import React from "react";
+import ReqHeaderSection from "./ReqHeaderSection";
 
 const BloodReqPage = () => {
   return (
     <body className="bg-gray-50">
       <div className="container mx-auto max-w-4xl p-6 md:p-8 my-10 bg-white shadow-lg rounded-lg">
-        <header className="mb-8">
-          <h1 className="text-3xl font-bold text-red-600 mb-2">
-            Request Information
-          </h1>
-          <p className="text-gray-700 text-sm">
-            Fill out the form to request blood for yourself or someone in need.
-            Provide key details like blood type, number of units, hospital, and
-            urgency. Our system will instantly alert nearby verified donors.
-            Every request is handled with speed, care, and confidentiality.
-            Together, we can help save lives—one donation at a time.
-          </p>
-        </header>
+        <ReqHeaderSection />
 
         <form action="#" method="POST">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
@@ -31,7 +21,7 @@ const BloodReqPage = () => {
                 name="fast-name"
                 id="fast-name"
                 placeholder="Full Name"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               />
             </div>
 
@@ -47,7 +37,7 @@ const BloodReqPage = () => {
                 name="last-name"
                 id="last-name"
                 placeholder="Full Name"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               />
             </div>
 
@@ -61,7 +51,7 @@ const BloodReqPage = () => {
               <select
                 id="patient-age"
                 name="patient-age"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               >
                 <option>Select number</option>
                 <option>0-17</option>
@@ -79,11 +69,7 @@ const BloodReqPage = () => {
               >
                 Gender:
               </label>
-              <select
-                id="gender"
-                name="gender"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-              >
+              <select id="gender" name="gender" className="input_donation">
                 <option>Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -102,7 +88,7 @@ const BloodReqPage = () => {
               <select
                 id="blood-group"
                 name="blood-group"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               >
                 <option>Select</option>
                 <option>A+</option>
@@ -123,11 +109,7 @@ const BloodReqPage = () => {
               >
                 Amount:
               </label>
-              <select
-                id="amount"
-                name="amount"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-              >
+              <select id="amount" name="amount" className="input_donation">
                 <option>Select amount</option>
                 <option>1 unit</option>
                 <option>2 units</option>
@@ -149,7 +131,7 @@ const BloodReqPage = () => {
                 name="date-of-donation"
                 id="date-of-donation"
                 placeholder="Select date"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               />
             </div>
 
@@ -163,7 +145,7 @@ const BloodReqPage = () => {
               <select
                 id="condition"
                 name="condition"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               >
                 <option>Select</option>
                 <option>Urgent</option>
@@ -184,7 +166,7 @@ const BloodReqPage = () => {
                 name="contact-number"
                 id="contact-number"
                 placeholder="Select number"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                className="input_donation"
               />
             </div>
 
