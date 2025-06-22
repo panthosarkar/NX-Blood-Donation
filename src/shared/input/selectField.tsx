@@ -1,7 +1,7 @@
 import { cn } from "@/library/utils/cn";
 import React, { FC } from "react";
 
-const selectField: FC<{
+const SelectField: FC<{
   label: string;
   options: string[];
   id: string;
@@ -24,4 +24,4 @@ const selectField: FC<{
   );
 };
 
-export default selectField;
+export default SelectField;
