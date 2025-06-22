@@ -1,7 +1,39 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import SignInHeaderSection from "./SignInHeaderSection";
+import InputField from "../input/InputField";
+import Link from "next/link";
 
 const SignInPage = () => {
+  type TFormData = {
+    email?: string;
+    phone?: string;
+    name?: string;
+    password?: string;
+  };
+
+  const [formData, setFormData] = useState<TFormData>({
+    email: "",
+    phone: "",
+    name: "",
+    password: "",
+  });
+
+  const handleAddReq = async () => {
+    try {
+    } finally {
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    if (name) {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
   return (
     <div className="bg-white text-gray-900">
       <div className="min-h-screen flex flex-col md:flex-row relative">
@@ -17,81 +49,63 @@ const SignInPage = () => {
             </p>
 
             <form action="#" method="POST" className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address:
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter Email"
-                  required
-                  className="mt-1 block w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                />
-              </div>
+              <InputField
+                id="email"
+                label="Email"
+                value={formData.email}
+                name="email"
+                type="email"
+                onChange={handleChange}
+                placeholder="Type your email"
+              />
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Number:
-                </label>
-                <input
-                  type="text"
-                  name="number"
-                  id="number"
-                  placeholder="Enter Number"
-                  className="mt-1 block w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                />
-              </div>
+              <InputField
+                id="phone"
+                label="Phone Number"
+                value={formData.phone}
+                name="phone"
+                type="tel"
+                onChange={handleChange}
+                placeholder="Type your phone number"
+              />
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Username:
-                </label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  placeholder="Enter Username"
-                  required
-                  className="mt-1 block w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                />
-              </div>
+              <InputField
+                id="name"
+                label="User Name"
+                value={formData.name}
+                name="name"
+                type="text"
+                onChange={handleChange}
+                placeholder="Type your user name"
+              />
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Password:
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter Password"
-                  required
-                  className="mt-1 block w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                />
-              </div>
+              <InputField
+                id="password"
+                label="Password"
+                value={formData.password}
+                name="password"
+                type="password"
+                onChange={handleChange}
+                placeholder="Type your password"
+              />
 
               <p className="text-xs text-gray-500 pt-1">
-                By registering you agree to the{" "}
-                <a
-                  href="#"
+                By registering you agree to the &nbsp;
+                <Link
+                  href="/"
                   className="font-medium text-red-600 hover:text-red-700"
                 >
                   Blood Donor Terms of Use
-                </a>
+                </Link>
                 .
               </p>
 
-              <button
-                type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out"
-              >
+              <button type="submit" className="w-full btn_primary">
                 Sign up
               </button>
             </form>
 
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <div className="relative">
                 <div
                   className="absolute inset-0 flex items-center"
@@ -157,7 +171,7 @@ const SignInPage = () => {
                   Sign With Github
                 </button>
               </div>
-            </div>
+            </div> */}
 
             <p className="mt-8 text-center text-sm text-gray-600">
               Already have an account?
