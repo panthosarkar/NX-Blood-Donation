@@ -27,10 +27,8 @@ const ReqMapSection = () => {
           x="50%"
           y="50%"
           dominantBaseline="middle"
-          text-anchor="middle"
-          font-family="sans-serif"
-          font-size="10px"
-          className="fill-current text-gray-500"
+          textAnchor="middle"
+          className="fill-current text-2.5 text-gray-500"
         >
           Map Area
         </text>
