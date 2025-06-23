@@ -43,6 +43,8 @@ const BloodReqPage = () => {
     }
   };
 
+  console.log("working");
+
   return (
     <div className="container mx-auto max-w-4xl p-6 md:p-8 my-10 bg-white shadow-lg rounded-lg">
       <ReqHeaderSection />
