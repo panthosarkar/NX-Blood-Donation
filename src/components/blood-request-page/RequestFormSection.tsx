@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Select, DateInputField, InputField } from "@bikiran/inputs";
 import ReqMapSection from "./ReqMapSection";
 import useApi from "@/library/utils/useApi";
-import { TInputChangeEvent } from "@/library/global-types";
+import {
+  TInputChangeEvent,
+  TTextAreaChangeEvent,
+} from "@/library/global-types";
 import { useBloodRequest } from "./context/BloodRequestProvider";
 import { addOption } from "@/library/utils/option";
 import capitalizeFirstLetter from "@/library/utils/capitalizeFirstLetter";
@@ -18,10 +21,12 @@ const RequestFormSection = () => {
   const conditions = filters?.conditions || [];
   const gender = filters?.gender || [];
 
-  const handleAddRequest = () => {
+  const handleAddRequest = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     post("/blood/request/post", formData)
       .then((res) => {
         alert("Request sent successfully!");
+        setFormData({});
       })
       .catch((err) => {
         console.error("Error sending request:", err);
@@ -29,7 +34,7 @@ const RequestFormSection = () => {
       });
   };
 
-  const handleChange = (e: TInputChangeEvent) => {
+  const handleChange = (e: TInputChangeEvent | TTextAreaChangeEvent) => {
     const { name, value } = e.target;
     if (name) {
       setFormData((prev) => ({ ...prev, [name]: value }));
@@ -38,7 +43,7 @@ const RequestFormSection = () => {
 
   return (
     <div>
-      <form method="POST" onSubmit={handleAddRequest}>
+      <form onSubmit={handleAddRequest}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
           <InputField
             label="Patient Name"
@@ -77,7 +82,7 @@ const RequestFormSection = () => {
             label="Blood Group"
             formData={formData}
             onChange={handleChange}
-            name="blood_group"
+            name="blood_type"
             className="bg-white"
             placeholder="Select Blood Group"
             containerClassname="[&>div>label]:text-[#181830] [&>div>label]:leading-5"
@@ -114,12 +119,12 @@ const RequestFormSection = () => {
             label="Condition"
             formData={formData}
             onChange={handleChange}
-            name="condition"
+            name="patient_condition"
             className="bg-white"
             containerClassname="[&>div>label]:text-[#181830]  [&>div>label]:leading-5"
             placeholder="Select Condition"
             options={
-              blood_types.map((item) =>
+              conditions.map((item) =>
                 addOption(item, capitalizeFirstLetter(item), item)
               ) || []
             }
@@ -155,6 +160,8 @@ const RequestFormSection = () => {
             <textarea
               id="reason"
               name="reason"
+              value={formData.reason || ""}
+              onChange={handleChange}
               rows={4}
               placeholder="write your reason here"
               className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
