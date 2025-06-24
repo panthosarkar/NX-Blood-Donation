@@ -35,8 +35,8 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="bg-white text-gray-900">
-      <div className="min-h-screen flex flex-col md:flex-row relative">
+    <div className="bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex flex-col md:flex-row relative">
         <SignInHeaderSection />
 
         <div className="w-full md:w-2/3 p-6 md:p-12 flex items-center justify-center bg-gray-50 md:bg-white">
