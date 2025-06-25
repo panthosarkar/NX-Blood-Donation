@@ -1,28 +1,24 @@
 "use client";
 import React, { useState } from "react";
 import SignInHeaderSection from "./SignInHeaderSection";
-import InputField from "../input/InputField";
 import Link from "next/link";
+import useApi from "@/library/utils/useApi";
+import { TFormEvent } from "@/library/global-types";
+import { InputField } from "@bikiran/inputs";
 
 const SignInPage = () => {
-  type TFormData = {
-    email?: string;
-    phone?: string;
-    name?: string;
-    password?: string;
-  };
+  const [formData, setFormData] = useState<Record<string, any>>({});
+  const { post } = useApi();
 
-  const [formData, setFormData] = useState<TFormData>({
-    email: "",
-    phone: "",
-    name: "",
-    password: "",
-  });
-
-  const handleAddReq = async () => {
-    try {
-    } finally {
-    }
+  const handleAddReq = (e: TFormEvent) => {
+    e.preventDefault();
+    post("/auth/registration", formData)
+      .then((response) => {
+        alert("Registration successful!");
+      })
+      .catch((error) => {
+        console.error("Error during registration:", error);
+      });
   };
 
   const handleChange = (
@@ -48,41 +44,28 @@ const SignInPage = () => {
               Get your Blood Donor account now
             </p>
 
-            <form action="#" method="POST" className="space-y-5">
+            <form onSubmit={handleAddReq} className="space-y-5">
               <InputField
-                id="email"
-                label="Email"
-                value={formData.email}
-                name="email"
-                type="email"
-                onChange={handleChange}
-                placeholder="Type your email"
-              />
-
-              <InputField
-                id="phone"
                 label="Phone Number"
-                value={formData.phone}
-                name="phone"
+                formData={formData}
+                name="phone_number"
                 type="tel"
                 onChange={handleChange}
                 placeholder="Type your phone number"
               />
 
               <InputField
-                id="name"
-                label="User Name"
-                value={formData.name}
-                name="name"
+                label="Name"
+                formData={formData}
+                name="display_name"
                 type="text"
                 onChange={handleChange}
                 placeholder="Type your user name"
               />
 
               <InputField
-                id="password"
                 label="Password"
-                value={formData.password}
+                formData={formData}
                 name="password"
                 type="password"
                 onChange={handleChange}
@@ -106,19 +89,17 @@ const SignInPage = () => {
             </form>
 
             <p className="mt-8 text-center text-sm text-gray-600">
-              Already have an account?
-              <a
-                href="#"
+              Already have an account?{" "}
+              <Link
+                href="/sign-in"
                 className="font-medium text-red-600 hover:text-red-700"
               >
                 Sign In
-              </a>
+              </Link>
             </p>
           </div>
         </div>
       </div>
-
-      <script type="module" src="index.tsx"></script>
     </div>
   );
 };
