@@ -16,7 +16,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="max-h-screen overflow-auto relative custom-scrollbar">
+    <div className="min-h-screen overflow-auto relative custom-scrollbar">
       {/* main bg image */}
       <Image
         alt=""
