@@ -34,7 +34,7 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="max-h-fit bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+    <div className="max-h-[70vh] bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
       <div className="flex flex-col md:flex-row relative">
         <SignInHeaderSection />
 
