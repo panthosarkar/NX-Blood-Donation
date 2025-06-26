@@ -34,11 +34,11 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+    <div className="max-h-fit bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
       <div className="flex flex-col md:flex-row relative">
         <SignInHeaderSection />
 
-        <div className="w-full md:w-2/3 p-6 md:p-12 flex items-center justify-center bg-gray-50 md:bg-white">
+        <div className="w-full md:w-2/3 p-6  md:p-12 flex items-center justify-center bg-gray-50 md:bg-white">
           <div className="max-w-full w-full bg-white p-8 md:p-10 rounded-xl form-card">
             <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center md:text-left">
               Register Account
