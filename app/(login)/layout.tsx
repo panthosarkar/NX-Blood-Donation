@@ -1,10 +1,8 @@
-import Navbar from "@/src/shared/navbar-section/Navbar";
 import Image from "next/image";
 import { ReactNode } from "react";
 import backgroundImage from "@/public/assets/image/bg-body.svg";
 import backgroundComp1 from "@/public/assets/image/bg-section-comp1.svg";
 import backgroundComp2 from "@/public/assets/image/bg-section-comp2.svg";
-import Footer from "@/src/shared/footer/Footer";
 
 export const metadata = {
   title: "Blood Donation",
@@ -16,7 +14,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="max-h-screen overflow-auto relative custom-scrollbar">
+    <div className="min-h-screen overflow-auto relative custom-scrollbar">
       {/* main bg image */}
       <Image
         alt=""
