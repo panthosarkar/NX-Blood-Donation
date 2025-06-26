@@ -5,16 +5,19 @@ import Link from "next/link";
 import useApi from "@/library/utils/useApi";
 import { TFormEvent } from "@/library/global-types";
 import { InputField } from "@bikiran/inputs";
+import { useRouter } from "next/navigation";
 
 const SignInPage = () => {
   const [formData, setFormData] = useState<Record<string, any>>({});
   const { post } = useApi();
+  const router = useRouter();
 
   const handleAddReq = (e: TFormEvent) => {
     e.preventDefault();
     post("/auth/registration", formData)
       .then((response) => {
         alert("Registration successful!");
+        router.push("/log-in");
       })
       .catch((error) => {
         console.error("Error during registration:", error);
@@ -72,7 +75,7 @@ const SignInPage = () => {
                 placeholder="Type your password"
               />
 
-              <p className="text-xs text-gray-500 pt-1">
+              <div className="text-xs text-gray-500 pt-1">
                 By registering you agree to the &nbsp;
                 <Link
                   href="/"
@@ -81,22 +84,28 @@ const SignInPage = () => {
                   Blood Donor Terms of Use
                 </Link>
                 .
-              </p>
+              </div>
 
-              <button type="submit" className="w-full btn_primary">
-                Sign up
-              </button>
+              <div className="w-full">
+                <Link
+                  href={"/sign-in"}
+                  type="submit"
+                  className="w-full btn_primary"
+                >
+                  Sign up
+                </Link>
+              </div>
             </form>
 
-            <p className="mt-8 text-center text-sm text-gray-600">
-              Already have an account?{" "}
+            <div className="mt-8 text-center text-sm flex justify-center text-gray-600">
+              <p> Already have an account?</p>
               <Link
-                href="/sign-in"
+                href="/log-in"
                 className="font-medium text-red-600 hover:text-red-700"
               >
                 Sign In
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       </div>
