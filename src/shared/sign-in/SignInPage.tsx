@@ -87,13 +87,9 @@ const SignInPage = () => {
               </div>
 
               <div className="w-full">
-                <Link
-                  href={"/sign-in"}
-                  type="submit"
-                  className="w-full btn_primary"
-                >
+                <button type="submit" className="w-full btn_primary">
                   Sign up
-                </Link>
+                </button>
               </div>
             </form>
 
