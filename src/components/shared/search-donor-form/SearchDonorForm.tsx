@@ -4,9 +4,11 @@ import { DateInputField } from "@bikiran/inputs";
 import { bloodGroup } from "@/public/assets/constant/BloodGroup";
 import { Button } from "@bikiran/button";
 import Select from "@/src/shared/select-field/Select";
+import { useRouter } from "next/navigation";
 
 const SearchDonorForm = () => {
   const [formData, setFormData] = useState<Record<string, any>>({});
+  const router = useRouter();
 
   const handleChange = (e: TInputChangeEvent) => {
     const { name, value } = e.target;
@@ -18,12 +20,27 @@ const SearchDonorForm = () => {
     }
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const query = Object.fromEntries(
+      Object.entries(formData).filter(([_, v]) => v !== undefined && v !== "")
+    );
+    const params = new URLSearchParams(query).toString();
+    router.push(`/find-donor?${params}`);
+  };
+
   return (
     <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
       <h3 className="text-2xl leading-5 font-medium text-center">
         Please Enter the required Field
       </h3>
-      <form className="flex flex-col gap-[50px] mt-7.5">
+      <form
+        className="flex flex-col gap-[50px] mt-7.5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit(e);
+        }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <Select
             formData={formData}
