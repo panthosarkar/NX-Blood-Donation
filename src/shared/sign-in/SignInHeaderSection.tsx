@@ -4,7 +4,7 @@ import SignInImage from "./sign-in-img.svg";
 
 const SignInHeaderSection = () => {
   return (
-    <div className=" h-screen w-full flex flex-col md:flex-row relative">
+    <div className="sm:max-h-[600px] w-full flex flex-col md:flex-row relative">
       <div className="absolute top-16 left-4 md:left-8 w-8 h-8 md:w-10 md:h-10 z-0">
         <div className="w-full h-full bg-red-500 opacity-80 transform -skew-x-12"></div>
         <div className="w-3/4 h-3/4 bg-red-400 opacity-60 transform -skew-x-12 absolute -bottom-2 -right-2"></div>
@@ -15,7 +15,7 @@ const SignInHeaderSection = () => {
       </div>
 
       <div className="w-full  p-8 md:p-12 flex flex-col justify-center items-center relative">
-        <div className="absolute top-8 left-8">
+        <div className="absolute top-4.5 left-8">
           <a
             href="#"
             className="flex items-center space-x-2 text-2xl font-bold text-red-600"

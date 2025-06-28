@@ -34,12 +34,12 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="max-h-full bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
-      <div className="flex flex-col md:flex-row relative">
+    <div className="max-h-[600px] h-full bg-white text-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex flex-col md:gap-10 md:flex-row relative">
         <SignInHeaderSection />
 
-        <div className="w-full md:w-2/3 p-6  md:p-12 flex items-center justify-center bg-gray-50 md:bg-white">
-          <div className="max-w-full w-full bg-white p-8 md:p-10 rounded-xl form-card">
+        <div className="max-h-[600px] w-full md:w-2/3 p-6  md:p-12 flex items-center justify-center bg-gray-50 md:bg-white">
+          <div className="max-w-full w-full form-card">
             <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center md:text-left">
               Register Account
             </h2>
@@ -99,7 +99,7 @@ const SignInPage = () => {
                 href="/log-in"
                 className="font-medium text-red-600 hover:text-red-700"
               >
-                Sign In
+                &nbsp;Sign In
               </Link>
             </div>
           </div>
