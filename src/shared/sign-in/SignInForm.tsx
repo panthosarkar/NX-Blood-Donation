@@ -75,7 +75,7 @@ const SignInForm = ({
             className="font-medium text-red-600 hover:text-red-700"
             onClick={() => setActivePath("sign-up")}
           >
-            &nbsp;Sign In
+            &nbsp;Sign Up
           </button>
         </div>
       </div>

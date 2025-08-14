@@ -12,6 +12,14 @@
   resolved "https://registry.npmjs.org/@bikiran/button/-/button-2.0.2.tgz"
   integrity sha512-yeJFLYYIaz83GWVJNF1OjjuyuZlrj1QkIUSBD7/EFuAB713HLAj48UKRR6K4weHW4y7Oi6KeEhSBjbZsuy52Zw==
 
+"@bikiran/chronopick@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bikiran/chronopick/-/chronopick-1.1.1.tgz#a9fdc261fc5ce2e71782e311e8d6807f5a318b12"
+  integrity sha512-889gVomeqqXMXb/Or7hFKqct/pL4aOh1Ckdi15SDCec7KzGrikkAAGeDXWXtGGS3iwe3h/3kV+GZMFHm9ecE5w==
+  dependencies:
+    clsx "^2.1.1"
+    tailwind-merge "^3.2.0"
+
 "@bikiran/inputs@^3.1.1":
   version "3.1.3"
   resolved "https://registry.npmjs.org/@bikiran/inputs/-/inputs-3.1.3.tgz"

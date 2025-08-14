@@ -108,12 +108,12 @@ const RequestFormSection = () => {
             >
               Date of Donation
             </label>
-            <DateInputField
+            {/* <DateInputField
               formData={formData}
               name="donation_date"
               className="w-full h-full [&_.react-datepicker-wrapper]:h-[45px] [&>div_.react-datepicker-input]:text-black"
               onChange={handleChange}
-            />
+            /> */}
           </div>
           <Select
             label="Condition"
