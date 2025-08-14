@@ -9,6 +9,8 @@ import {
 import { useBloodRequest } from "./context/BloodRequestProvider";
 import { addOption } from "@/library/utils/option";
 import capitalizeFirstLetter from "@/library/utils/capitalizeFirstLetter";
+import ChronoPickDate from "@/src/shared/chronopick/ChronoPickDate";
+import { ChronoPickMode } from "@bikiran/chronopick";
 
 const RequestFormSection = () => {
   const [formData, setFormData] = useState<Record<string, any>>({});
@@ -101,27 +103,20 @@ const RequestFormSection = () => {
             parentClassName="[&>div>label]:text-[#181830] [&>div>label]:leading-5"
             placeholder="Type amount"
           />
-          <div>
-            <label
-              htmlFor="donation_date"
-              className="block text font-medium text-gray-700 mb-1"
-            >
-              Date of Donation
-            </label>
-            {/* <DateInputField
+            <ChronoPickDate
               formData={formData}
-              name="donation_date"
-              className="w-full h-full [&_.react-datepicker-wrapper]:h-[45px] [&>div_.react-datepicker-input]:text-black"
-              onChange={handleChange}
-            /> */}
-          </div>
+              setFormData={setFormData}
+              mode={ChronoPickMode.Single}
+              label="Date of Donation"
+              classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
+            />
           <Select
             label="Condition"
             formData={formData}
             onChange={handleChange}
             name="patient_condition"
             className="bg-white"
-            containerClassname="[&>div>label]:text-[#181830]  [&>div>label]:leading-5"
+            containerClassname="[&>div>label]:text-[#181830] [&>.container]:!mt-1 [&>div>label]:leading-5"
             placeholder="Select Condition"
             options={
               conditions.map((item) =>

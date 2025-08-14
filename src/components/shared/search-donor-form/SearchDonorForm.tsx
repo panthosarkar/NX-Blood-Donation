@@ -5,6 +5,8 @@ import { bloodGroup } from "@/public/assets/constant/BloodGroup";
 import { Button } from "@bikiran/button";
 import Select from "@/src/shared/select-field/Select";
 import { useRouter } from "next/navigation";
+import ChronoPickDate from "@/src/shared/chronopick/ChronoPickDate";
+import { ChronoPickMode } from "@bikiran/chronopick";
 
 const SearchDonorForm = () => {
   const [formData, setFormData] = useState<Record<string, any>>({});
@@ -79,17 +81,13 @@ const SearchDonorForm = () => {
               },
             ]}
           />
-          <div className="">
-            <label htmlFor="" className="text-[#181830] font-medium text-lg">
-              Date of blood donation
-            </label>
-            <DateInputField
+          <ChronoPickDate
               formData={formData}
-              name="dateIssued"
-              className="w-full h-full [&_.react-datepicker-wrapper]:h-[45px] [&>div_.react-datepicker-input]:text-black"
-              onChange={handleChange}
+              setFormData={setFormData}
+              mode={ChronoPickMode.Single}
+              label="Date of Donation"
+              classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
             />
-          </div>
         </div>
         <Button
           type="submit"
