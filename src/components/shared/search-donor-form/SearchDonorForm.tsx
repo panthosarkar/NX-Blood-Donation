@@ -32,7 +32,7 @@ const SearchDonorForm = () => {
   };
 
   return (
-    <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] max-w-4xl">
+    <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] sm:max-w-4xl">
       <h3 className="text-2xl leading-5 font-medium text-center">
         Please Enter the required Field
       </h3>
