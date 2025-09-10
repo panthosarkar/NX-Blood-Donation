@@ -4,6 +4,7 @@ import logo from "@/public/assets/image/logo.svg";
 import { Button } from "@bikiran/button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import NavSidebar from "./NavSidebar";
 
 const NavbarLogoComp = () => {
   return (
@@ -13,7 +14,7 @@ const NavbarLogoComp = () => {
       width={100}
       height={100}
       sizes="100vw"
-      className="w-[250px]"
+      className="sm:w-[250px] w-[150px]"
     />
   );
 };
@@ -53,7 +54,7 @@ const NavbarLinks = () => {
   }, [pathname]);
 
   return (
-    <ul className="w-full flex items-center justify-start gap-10">
+    <ul className="w-full items-center justify-start gap-10 sm:flex hidden">
       {navLinks.map((link) => (
         <li
           key={link.name}
@@ -71,15 +72,18 @@ const NavbarLinks = () => {
 
 const NavbarContainer = () => {
   return (
-    <div className="w-[1400px] flex items-center justify-between gap-20">
-      <NavbarLogoComp />
-      <NavbarLinks />
-      <Link
-        href={"/sign-in"}
-        className="!text-primary leading-5  text-lg px-[30px] py-3 border border-primary !bg-white rounded-8 flex-shrink-0"
-      >
-        Sign In
-      </Link>
+    <div className="sm:w-[1400px] w-full flex items-center gap-2.5 sm:px-0 px-5">
+      <NavSidebar />
+      <div className="w-full flex items-center justify-between sm:gap-20">
+        <NavbarLogoComp />
+        <NavbarLinks />
+        <Link
+          href={"/sign-in"}
+          className="!text-primary sm:leading-5 sm:text-lg sm:px-[30px] sm:py-3 text-base leading-normal px-3.5 py-1.5 border border-primary !bg-white rounded-8 flex-shrink-0"
+        >
+          Sign In
+        </Link>
+      </div>
     </div>
   );
 };

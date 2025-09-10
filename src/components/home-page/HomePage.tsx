@@ -11,18 +11,10 @@ const HomePage = () => {
       <section>
         <HomePageHeroSection />
       </section>
-      <section>
-        <HomePageServices />
-      </section>
-      <section>
-        <HomeFindBloodSection />
-      </section>
-      <section>
-        <HomeBloodRequestSection />
-      </section>
-      <section>
-        <HomeNetworkSection />
-      </section>
+      <section>{/* <HomePageServices /> */}</section>
+      <section>{/* <HomeFindBloodSection /> */}</section>
+      <section>{/* <HomeBloodRequestSection /> */}</section>
+      <section>{/* <HomeNetworkSection /> */}</section>
     </div>
   );
 };

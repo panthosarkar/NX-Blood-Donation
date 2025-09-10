@@ -22,27 +22,27 @@ export default function RootLayout({ children }: RootLayoutProps) {
         alt=""
         src={backgroundImage}
         sizes="100vh"
-        className="h-screen absolute top-0 right-0"
+        className="h-screen absolute sm:top-0 sm:right-0 top-[250px]"
       />
       {/* comp 1 */}
       <Image
         alt=""
         src={backgroundComp1}
         sizes="100vh"
-        className="absolute top-[207px] left-[56px]"
+        className="absolute sm:top-[207px] top-[450px] sm:left-[56px] left-5"
       />
       {/* comp2 */}
       <Image
         alt=""
         src={backgroundComp2}
         sizes="100vh"
-        className="absolute top-[800px] right-[113px]"
+        className="absolute sm:top-[800px] top-[850px] sm:right-[113px] right-5"
       />
       <Navbar />
-      <div className="relative top-[72px] max-w-[1400px] mx-auto mt-[60px] pb-[300px]">
+      <div className="relative top-[72px] max-w-[1400px] mx-auto sm:mt-[60px] mt-5 pb-[300px] sm:px-0 px-4">
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
       {/* <CookiesAcceptPopup /> */}
     </div>
     // <ComposeProviders
