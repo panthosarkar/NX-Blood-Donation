@@ -34,7 +34,9 @@ const FindDonorPage = () => {
       <p className="mb-6">
         Use the form below to search for potential blood donors in your area.
       </p>
-      <SearchDonorForm />
+      <div className="flex items-center justify-center">
+        <SearchDonorForm />
+      </div>
       <FindDonorTableSection />
     </div>
   );

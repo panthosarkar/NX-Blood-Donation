@@ -32,7 +32,7 @@ const SearchDonorForm = () => {
   };
 
   return (
-    <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+    <div className="w-full bg-white px-5 py-7.5 rounded-10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] max-w-4xl">
       <h3 className="text-2xl leading-5 font-medium text-center">
         Please Enter the required Field
       </h3>
@@ -43,19 +43,18 @@ const SearchDonorForm = () => {
           handleSubmit(e);
         }}
       >
+        <Select
+          formData={formData}
+          label="Blood Group"
+          name="bloodGroup"
+          onChange={handleChange}
+          placeholder="Select Blood Group"
+          className="bg-white"
+          containerClassname="[&>div>label]:text-[#181830] [&>div>label]:text-lg &>div>label]:leading-5"
+          options={bloodGroup}
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-5 gap-2.5">
-          <Select
-            formData={formData}
-            label="Blood Group"
-            name="bloodGroup"
-            onChange={handleChange}
-            placeholder="Select Blood Group"
-            className="bg-white"
-            containerClassname="[&>div>label]:text-[#181830] [&>div>label]:text-lg &>div>label]:leading-5"
-            options={bloodGroup}
-          />
-
-          <Select
+          {/* <Select
             formData={formData}
             label="Donor Type"
             name="donorType"
@@ -64,7 +63,7 @@ const SearchDonorForm = () => {
             className="bg-white"
             containerClassname="[&>div>label]:text-[#181830] [&>div>label]:text-lg &>div>label]:leading-5"
             options={bloodGroup}
-          />
+          /> */}
           <Select
             formData={formData}
             label="City"
