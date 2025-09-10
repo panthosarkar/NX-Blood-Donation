@@ -31,7 +31,7 @@ const HomeFindBloodSection = () => {
         </div>
       </div>
       <div className="flex sm:flex-row flex-col items-center sm:gap-[60px] gap-3.5">
-        <div className="sm:w-[512px] sm:h-[525px]">
+        <div className="sm:w-[512px] sm:h-[525px] flex-shrink-0">
           <Image
             src={needBloodImg}
             alt="need-blood"

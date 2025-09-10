@@ -7,7 +7,7 @@ import HomeNetworkSection from "./HomeNetworkSection";
 
 const HomePage = () => {
   return (
-    <div className="space-y-[100px]">
+    <div className="sm:space-y-[100px] space-y-[50px]">
       <section>
         <HomePageHeroSection />
       </section>
@@ -17,8 +17,12 @@ const HomePage = () => {
       <section>
         <HomeFindBloodSection />
       </section>
-      <section>{/* <HomeBloodRequestSection /> */}</section>
-      <section>{/* <HomeNetworkSection /> */}</section>
+      <section>
+        <HomeBloodRequestSection />
+      </section>
+      <section>
+        <HomeNetworkSection />
+      </section>
     </div>
   );
 };

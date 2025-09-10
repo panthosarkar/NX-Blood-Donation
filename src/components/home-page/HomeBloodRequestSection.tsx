@@ -4,10 +4,10 @@ import imgRequestBlood from "@/public/assets/image/img-req-blood.svg";
 
 const HomeBloodRequestSection = () => {
   return (
-    <div className="flex items-center gap-[60px]">
-      <div className="flex flex-col items-start justify-center w-[630px]">
-        <div className="flex flex-col items-start justify-center">
-          <h2 className="text-[45px] leading-[55px] font-medium text-start">
+    <div className="flex sm:flex-row flex-col sm:items-center sm:gap-[60px] gap-7.5">
+      <div className="flex flex-col sm:items-start items-center justify-center sm:w-[630px]">
+        <div className="flex flex-col sm:items-start items-center justify-center">
+          <h2 className="text-[45px] leading-[55px] font-medium sm:text-start">
             Blood Request
           </h2>
           <span className="relative -top-2">
@@ -27,22 +27,24 @@ const HomeBloodRequestSection = () => {
             </svg>
           </span>
         </div>
-        <p className="text-gray text-justify text-lg mt-3.5">
-          If you or a loved one is in need of blood, or if you’d like to help
+        <p className="text-gray text-justify sm:text-lg mt-3.5">
+          If you or a loved one is in need of blood, or if you'd like to help
           others by becoming a donor, please fill out the request form. Our team
           will carefully review your submission and reach out to you as soon as
           possible. Every request and every donation brings hope — thank you for
           being part of this life-saving effort
         </p>
       </div>
-      <Image
-        alt=""
-        src={imgRequestBlood}
-        width={100}
-        height={100}
-        sizes="100vw"
-        className="w-[750px] h-[450px]"
-      />
+      <div className="sm:w-[750px] sm:h-[450px] flex-shrink-0">
+        <Image
+          alt=""
+          src={imgRequestBlood}
+          width={100}
+          height={100}
+          sizes="100vw"
+          className="size-full"
+        />
+      </div>
     </div>
   );
 };

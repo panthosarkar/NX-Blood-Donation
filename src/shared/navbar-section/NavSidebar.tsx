@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const NavSidebar = () => {
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
 
   const [activeLink, setActiveLink] = useState<string>("/");
   const pathname = usePathname();

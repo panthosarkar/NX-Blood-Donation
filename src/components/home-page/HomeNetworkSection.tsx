@@ -42,7 +42,7 @@ const CurrentServicesComp = () => {
 
 const HomeNetworkSection = () => {
   return (
-    <div className="space-y-[50px]">
+    <div className="sm:space-y-[50px] space-y-6">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-[45px] leading-[55px] font-medium text-center">
@@ -66,8 +66,8 @@ const HomeNetworkSection = () => {
             </svg>
           </span>
         </div>
-        <p className="text-gray text-center text-lg mt-3.5 w-[1100px]">
-          Whether it’s an emergency or planned surgery, we connect patients with
+        <p className="text-gray text-center text-lg mt-3.5 sm:w-[1100px]">
+          Whether it's an emergency or planned surgery, we connect patients with
           verified donors quickly and reliably.Our network is built on trust,
           urgency, and the power of human kindness.
         </p>

@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         alt=""
         src={backgroundComp2}
         sizes="100vh"
-        className="absolute sm:top-[800px] top-[850px] sm:right-[113px] right-5"
+        className="absolute top-[800px] sm:right-[113px] right-5"
       />
       <Navbar />
       <div className="relative top-[72px] max-w-[1400px] mx-auto sm:mt-[60px] mt-5 pb-[300px] sm:px-0 px-4">
