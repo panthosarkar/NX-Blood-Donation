@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <div className="relative top-[72px] max-w-[1400px] mx-auto sm:mt-[60px] mt-5 pb-[300px] sm:px-0 px-4">
         {children}
       </div>
-      {/* <Footer /> */}
+      <Footer />
       {/* <CookiesAcceptPopup /> */}
     </div>
     // <ComposeProviders

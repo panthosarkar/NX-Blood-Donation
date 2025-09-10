@@ -6,7 +6,7 @@ import SearchDonorForm from "../shared/search-donor-form/SearchDonorForm";
 
 const HomeFindBloodSection = () => {
   return (
-    <div className="space-y-[50px]">
+    <div className="sm:space-y-[50px] space-y-6">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-[45px] leading-[55px] font-medium text-center">
@@ -30,14 +30,16 @@ const HomeFindBloodSection = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center gap-[60px]">
-        <Image
-          src={needBloodImg}
-          alt="need-blood"
-          width={100}
-          height={100}
-          className="w-[512px] h-[525px]"
-        />
+      <div className="flex sm:flex-row flex-col items-center sm:gap-[60px] gap-3.5">
+        <div className="sm:w-[512px] sm:h-[525px]">
+          <Image
+            src={needBloodImg}
+            alt="need-blood"
+            width={100}
+            height={100}
+            className="size-full"
+          />
+        </div>
         <SearchDonorForm />
       </div>
     </div>

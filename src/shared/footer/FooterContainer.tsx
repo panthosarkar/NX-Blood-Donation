@@ -3,7 +3,6 @@ import React, { FC, useEffect, useState } from "react";
 import logo from "@/public/assets/image/logo.svg";
 import { contactInfo, linkInfo } from "@/src/components/home-page/constant";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const FooterContactInfoComp: FC<{
   icon: string;
@@ -47,7 +46,7 @@ const FooterLogoAndTextComp = () => {
           of heroes—donate blood and give someone a second chance
         </p>
       </div>
-      <div className="space-y-2.5">
+      <div className="sm:space-y-5 space-y-1.5">
         {contactInfo.map((info) => (
           <FooterContactInfoComp
             key={info.title}
@@ -63,7 +62,7 @@ const FooterLogoAndTextComp = () => {
 
 const Links = ({ links }) => {
   return (
-    <ul className="space-y-5">
+    <ul className="sm:space-y-5 space-y-1.5">
       {links.map((link) => (
         <li key={link.name}>
           <Link
@@ -80,7 +79,7 @@ const Links = ({ links }) => {
 
 const FooterLinkComp = () => {
   return (
-    <div className="flex items-start justify-between">
+    <div className="flex sm:flex-row flex-col sm:mt-0 mt-5 items-start justify-between sm:gap-0 gap-2.5">
       {linkInfo?.map((section) => (
         <div key={section.title} className="space-y-2.5">
           <div>
@@ -96,7 +95,7 @@ const FooterLinkComp = () => {
             </svg>
           </div>
           {section.title === "Social Links" ? (
-            <ul className="space-y-5">
+            <ul className="sm:space-y-5 space-y-1.5">
               {section.links.map((link) => (
                 <li key={link.name} className="flex items-center gap-2 ">
                   <Image
@@ -127,7 +126,7 @@ const FooterLinkComp = () => {
 
 const FooterContainer = () => {
   return (
-    <div className="grid grid-cols-2 items-start gap-[208px]">
+    <div className="grid sm:grid-cols-2 items-start sm:gap-[208px]">
       <FooterLogoAndTextComp />
       <FooterLinkComp />
     </div>

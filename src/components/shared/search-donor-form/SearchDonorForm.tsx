@@ -37,13 +37,13 @@ const SearchDonorForm = () => {
         Please Enter the required Field
       </h3>
       <form
-        className="flex flex-col gap-[50px] mt-7.5"
+        className="flex flex-col sm:gap-[50px] gap-6 sm:mt-7.5 mt-3.5"
         onSubmit={(e) => {
           e.preventDefault();
           handleSubmit(e);
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-5 gap-2.5">
           <Select
             formData={formData}
             label="Blood Group"
@@ -82,12 +82,12 @@ const SearchDonorForm = () => {
             ]}
           />
           <ChronoPickDate
-              formData={formData}
-              setFormData={setFormData}
-              mode={ChronoPickMode.Single}
-              label="Date of Donation"
-              classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
-            />
+            formData={formData}
+            setFormData={setFormData}
+            mode={ChronoPickMode.Single}
+            label="Date of Donation"
+            classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
+          />
         </div>
         <Button
           type="submit"
