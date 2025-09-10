@@ -24,15 +24,17 @@ const RequestFormSection = () => {
   const gender = filters?.gender || [];
 
   const handleAddRequest = (e: React.FormEvent<HTMLFormElement>) => {
+    const payload = { ...formData, donation_date: formData.date };
+
     e.preventDefault();
-    post("/blood/request/post", formData)
+    post("/blood/request/post", payload)
       .then((res) => {
         alert("Request sent successfully!");
         setFormData({});
       })
       .catch((err) => {
         console.error("Error sending request:", err);
-        alert("Failed to send request. Please try again.");
+        alert(`Failed to send request. Please try again. ${err.message}`);
       });
   };
 
@@ -42,6 +44,8 @@ const RequestFormSection = () => {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
   };
+
+  console.log(formData);
 
   return (
     <div>
@@ -103,13 +107,13 @@ const RequestFormSection = () => {
             parentClassName="[&>div>label]:text-[#181830] [&>div>label]:leading-5"
             placeholder="Type amount"
           />
-            <ChronoPickDate
-              formData={formData}
-              setFormData={setFormData}
-              mode={ChronoPickMode.Single}
-              label="Date of Donation"
-              classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
-            />
+          <ChronoPickDate
+            formData={formData}
+            setFormData={setFormData}
+            mode={ChronoPickMode.Single}
+            label="Date of Donation"
+            classname="[&>div>div>input]:!h-[45px] [&>div>div>input]:!mt-1 [&>label]:!text-[#181830] [&>label]:text-base"
+          />
           <Select
             label="Condition"
             formData={formData}
@@ -165,8 +169,12 @@ const RequestFormSection = () => {
         </div>
 
         <div className="mt-8 flex justify-end space-x-3">
-          <button type="button" className="btn_gray">
-            Cancel
+          <button
+            type="button"
+            className="btn_gray"
+            onClick={() => setFormData({})}
+          >
+            Reset
           </button>
           <button type="submit" className="btn_primary">
             Send blood request

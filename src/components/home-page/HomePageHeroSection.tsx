@@ -1,9 +1,13 @@
+"use client";
 import { Button } from "@bikiran/button";
 import Image from "next/image";
 import React from "react";
 import heroSectionImage from "@/public/assets/image/hero-section-img.svg";
+import { useRouter } from "next/navigation";
 
 const HomePageHeroSection = () => {
+  const router = useRouter();
+
   return (
     <div className="sm:flex items-center justify-between">
       <div className="sm:w-[630px]">
@@ -17,7 +21,10 @@ const HomePageHeroSection = () => {
           newborns. Join the movement and become someone's lifeline
         </p>
         <div className="flex items-center sm:justify-normal justify-center gap-4 sm:mt-[50px] mt-6">
-          <Button className="bg-primary text-white sm:px-7.5 sm:py-3 px-3.5 py-1.5 rounded-8 hover:bg-primary-50 hover:text-primary transition-all duration-300 ease-in-out">
+          <Button
+            className="bg-primary text-white sm:px-7.5 sm:py-3 px-3.5 py-1.5 rounded-8 hover:bg-primary-50 hover:text-primary transition-all duration-300 ease-in-out"
+            onClick={() => router.push("/blood-request")}
+          >
             Blood Request
           </Button>
           <Button className="!bg-primary-50 !text-primary sm:px-7.5 sm:py-3 px-3.5 py-1.5 rounded-8 hover:!bg-primary hover:!text-white transition-all duration-300 ease-in-out">
